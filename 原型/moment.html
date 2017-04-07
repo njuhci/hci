@@ -1,0 +1,419 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>朋友圈 - 知康</title>
+    <link rel="stylesheet" href="/assets/css/bootstrap.css">
+    <link rel="stylesheet" href="/assets/css/font-awesome.css">
+    <link rel="stylesheet" href="/assets/css/style.css">
+    <script src="/assets/js/jquery-1.11.3.min.js"></script>
+    <script src="/assets/js/bootstrap.min.js"></script>
+    <script src="/assets/js/jquery.scrollUp.min.js"></script>
+    <script src="/assets/js/script.js"></script>
+</head>
+<body>
+
+<div class="navbar navbar-default">
+    <div class="container">
+        <div class="navbar-header">
+            <a href="welcome.html" class="navbar-brand">知康</a>
+            <button class="navbar-toggle" type="button" data-toggle="collapse" data-target="#navbar-main">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+        </div>
+        <div class="navbar-collapse collapse" id="navbar-main">
+            <ul class="nav navbar-nav">
+                <li><a href="index.html">首页</a></li>
+                <li><a href="health.html">健康</a></li>
+                <li><a href="activity.html">活动</a></li>
+                <li><a href="advice.html">建议</a></li>
+                <li class="active"><a href="moment.html">朋友圈</a></li>
+                <li><a href="group.html">兴趣组</a></li>
+            </ul>
+            <ul class="nav navbar-nav navbar-right">
+                <li>
+                    <a href="message.html" title="您有四条新的通知">
+                        <i class="fa fa-envelope-o"></i>
+                        <span class="label label-warning">4</span>
+                    </a>
+                </li>
+                <li class="dropdown nav-user">
+                    <a href="#" style="padding: 10px" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
+                        <img src="/assets/img/user.jpg" class="img-circle" style="width: 30px">
+                    </a>
+                    <ul class="dropdown-menu" role="menu">
+                        <li><a href="user_home.html">我的主页</a></li>
+                        <li><a href="setting.html">个人设置</a></li>
+                        <li class="divider"></li>
+                        <li><a href="#">帮助中心</a></li>
+                        <li><a href="#">建议反馈</a></li>
+                        <li class="divider"></li>
+                        <li><a href="login.html">登出</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+<div class="container">
+
+    <div class="row">
+
+        <div class="col-sm-3">
+
+            <div class="panel friends-panel">
+                <div class="panel-heading panel-heading-up">
+                    <h5 class="inline-title">我的好友</h5>
+                    <div class="pull-right">
+                        <a href="friend.html" class="small">查看所有好友</a>
+                    </div>
+                </div>
+                <div class="panel-body">
+                    <div class="row">
+                        <div class="col-xs-4">
+                            <a href="user_home.html" title="小明">
+                                <img src="/assets/img/group_1.png" class="img-responsive img-border img-margin-bottom">
+                            </a>
+                        </div>
+                        <div class="col-xs-4">
+                            <a href="user_home.html" title="小洪">
+                                <img src="/assets/img/group_2.jpg" class="img-responsive img-border img-margin-bottom">
+                            </a>
+                        </div>
+                        <div class="col-xs-4">
+                            <a href="user_home.html" title="小白">
+                                <img src="/assets/img/group_3.jpg" class="img-responsive img-border img-margin-bottom">
+                            </a>
+                        </div>
+                        <div class="col-xs-4">
+                            <a href="user_home.html" title="小明">
+                                <img src="/assets/img/group_4.jpg" class="img-responsive img-border img-margin-bottom">
+                            </a>
+                        </div>
+                        <div class="col-xs-4">
+                            <a href="user_home.html" title="小明">
+                                <img src="/assets/img/group_5.jpg" class="img-responsive img-border img-margin-bottom">
+                            </a>
+                        </div>
+                        <div class="col-xs-4">
+                            <a href="user_home.html" title="小明">
+                                <img src="/assets/img/group_6.jpg" class="img-responsive img-border img-margin-bottom">
+                            </a>
+                        </div>
+                        <div class="col-xs-4">
+                            <a href="user_home.html" title="小明">
+                                <img src="/assets/img/group_4.jpg" class="img-responsive img-border img-margin-bottom">
+                            </a>
+                        </div>
+                        <div class="col-xs-4">
+                            <a href="user_home.html" title="小明">
+                                <img src="/assets/img/group_5.jpg" class="img-responsive img-border img-margin-bottom">
+                            </a>
+                        </div>
+                        <div class="col-xs-4">
+                            <a href="user_home.html" title="小明">
+                                <img src="/assets/img/group_6.jpg" class="img-responsive img-border img-margin-bottom">
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="panel rank-panel">
+                <div class="panel-heading">
+                    <h5 class="inline-title">当日运动排行榜</h5>
+                    <div class="pull-right">
+                        <a href="rank.html" class="small">查看更多榜单</a>
+                    </div>
+                </div>
+                <div class="panel-body user-rank panel-top-border">
+                    <div class="row">
+                        <div class="col-xs-2 rank-number">
+                            <i class="h2">1</i>
+                        </div>
+                        <div class="col-xs-4">
+                            <a href="user_home.html" title="小明">
+                                <img src="/assets/img/group_1.png" class="img-responsive img-border">
+                            </a>
+                        </div>
+                        <div class="col-xs-6">
+                            <div class="progress progress-striped active" style="width: 100%">
+                                <div class="progress-bar" style="width: 100%"></div>
+                            </div>
+                            250 大卡
+                        </div>
+                    </div>
+                </div>
+                <div class="panel-body user-rank panel-top-border">
+                    <div class="row">
+                        <div class="col-xs-2 rank-number">
+                            <i class="h2">2</i>
+                        </div>
+                        <div class="col-xs-4">
+                            <a href="user_home.html" title="小洪">
+                                <img src="/assets/img/group_2.jpg" class="img-responsive img-border">
+                            </a>
+                        </div>
+                        <div class="col-xs-6">
+                            <div class="progress progress-striped active" style="width: 80%">
+                                <div class="progress-bar" style="width: 100%"></div>
+                            </div>
+                            200 大卡
+                        </div>
+                    </div>
+                </div>
+                <div class="panel-body user-rank panel-top-border">
+                    <div class="row">
+                        <div class="col-xs-2 rank-number">
+                            <i class="h2">3</i>
+                        </div>
+                        <div class="col-xs-4">
+                            <a href="user_home.html" title="小白">
+                                <img src="/assets/img/group_3.jpg" class="img-responsive img-border">
+                            </a>
+                        </div>
+                        <div class="col-xs-6">
+                            <div class="progress progress-striped active" style="width: 70%">
+                                <div class="progress-bar" style="width: 100%"></div>
+                            </div>
+                            180 大卡
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="col-sm-9">
+
+            <div class="panel submit-panel">
+
+                <form>
+                    <div class="panel-body">
+                        <textarea class="form-control" rows="4" id="moment-textarea" style="resize: none; margin-bottom: 5px"></textarea>
+                        <div>
+                            <button class="btn btn-info btn-sm">图片</button>
+                            <button class="btn btn-info btn-sm">定位</button>
+                            <button type="submit" class="btn btn-primary btn-sm pull-right">发布</button>
+                        </div>
+                    </div>
+                </form>
+
+            </div>
+
+            <div class="panel moments-panel">
+
+                <div class="panel-top-border">
+                    <div class="panel-body">
+                        <a href="moment_home.html">
+                            <img src="/assets/img/user.jpg" class="img-responsive img-circle" title="vboar"
+                                 style="width: 70px; float: left; margin-right: 10px" />
+                        </a>
+                    <span class=""><b>Vboar</b><br/>传说：奶油和蛋糕走进了婚礼的殿堂，所以有了奶油蛋糕。[可怜]而深爱着奶油的面包只能把爱埋在心里，
+                        变成了一只泡芙。当你咬下第一口，你就会[心]上它。贝思客极致泡芙——你会爱上的泡芙。</span>
+                        <div class="clearfix" style="margin-bottom: 10px"></div>
+                        <img src="/assets/img/group_1.png" style="width: 150px; margin-left: 80px; margin-bottom: 10px">
+                        <p class="small" style="color: #a0a0a0; margin-left: 80px;">6分钟前</p>
+                        <div class="pull-right" style="margin-top: -10px">
+                            <a class="small comment-click">评论</a>&nbsp&nbsp&nbsp&nbsp
+                            <a href="#"><i class="fa fa-thumbs-o-up"> 127</i></a>
+                        </div>
+                    </div>
+                    <div class="panel-body panel-top-border comment-panel" style="background-color: #fafafa; ;">
+                        <form>
+                            <img src="/assets/img/user.jpg" class="img-responsive img-circle" title="vboar"
+                                 style="width: 40px; float: left; margin-right: 10px" />
+                        <textarea class="form-control" rows="1" class="comment-textArea"
+                                  style="resize: none; margin-bottom: 5px; float: right; width: 90%"></textarea>
+                            <div class="clearfix" style="margin-bottom: 10px"></div>
+                            <button type="submit" class="btn btn-primary btn-sm pull-right">评论</button>
+                            <div class="clearfix" style="margin-bottom: 20px"></div>
+                        </form>
+                        <div style="margin-left: 55px;">
+                            <div class="panel-body panel-top-border">
+                                <a href="moment_home.html">
+                                    <img src="/assets/img/user.jpg" class="img-responsive img-circle" title="vboar"
+                                         style="width: 40px; float: left; margin-right: 10px" />
+                                </a>
+                                <p class="small"><b>Vboar</b>： 感谢主页娘【哎是主页娘♀对吧】邮箱小编也非常亚撒西</p>
+                                <span class="small" style="color: #a0a0a0;">3分钟前</span>
+                                <a href="#" class="small pull-right">回复</a>
+                            </div>
+                            <div class="panel-body panel-top-border">
+                                <a href="moment_home.html">
+                                    <img src="/assets/img/user.jpg" class="img-responsive img-circle" title="vboar"
+                                         style="width: 40px; float: left; margin-right: 10px" />
+                                </a>
+                                <p class="small"><b>Vboar</b>： 感谢主页娘【哎是主页娘♀对吧】邮箱小编也非常亚撒西</p>
+                                <span class="small" style="color: #a0a0a0;">3分钟前</span>
+                                <a href="#" class="small pull-right">回复</a>
+                            </div>
+                            <div class="panel-body panel-top-border">
+                                <a href="moment_home.html">
+                                    <img src="/assets/img/user.jpg" class="img-responsive img-circle" title="vboar"
+                                         style="width: 40px; float: left; margin-right: 10px" />
+                                </a>
+                                <p class="small"><b>Vboar</b>： 感谢主页娘【哎是主页娘♀对吧】邮箱小编也非常亚撒西</p>
+                                <span class="small" style="color: #a0a0a0;">3分钟前</span>
+                                <a href="#" class="small pull-right">回复</a>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+                <div class="panel-top-border">
+                    <div class="panel-body">
+                        <a href="moment_home.html">
+                            <img src="/assets/img/user.jpg" class="img-responsive img-circle" title="vboar"
+                                 style="width: 70px; float: left; margin-right: 10px" />
+                        </a>
+                    <span class=""><b>Vboar</b><br/>传说：奶油和蛋糕走进了婚礼的殿堂，所以有了奶油蛋糕。[可怜]而深爱着奶油的面包只能把爱埋在心里，
+                        变成了一只泡芙。当你咬下第一口，你就会[心]上它。贝思客极致泡芙——你会爱上的泡芙。</span>
+                        <div class="clearfix" style="margin-bottom: 10px"></div>
+                        <img src="/assets/img/group_1.png" style="width: 150px; margin-left: 80px; margin-bottom: 10px">
+                        <p class="small" style="color: #a0a0a0; margin-left: 80px;">6分钟前</p>
+                        <div class="pull-right" style="margin-top: -10px">
+                            <a class="small comment-click">评论</a>&nbsp&nbsp&nbsp&nbsp
+                            <a href="#"><i class="fa fa-thumbs-o-up"> 127</i></a>
+                        </div>
+                    </div>
+                    <div class="panel-body panel-top-border comment-panel" style="background-color: #fafafa; display: none;">
+                        <form>
+                            <img src="/assets/img/user.jpg" class="img-responsive img-circle" title="vboar"
+                                 style="width: 40px; float: left; margin-right: 10px" />
+                        <textarea class="form-control" rows="1" class="comment-textArea"
+                                  style="resize: none; margin-bottom: 5px; float: right; width: 90%"></textarea>
+                            <div class="clearfix" style="margin-bottom: 10px"></div>
+                            <button type="submit" class="btn btn-primary btn-sm pull-right">评论</button>
+                            <div class="clearfix" style="margin-bottom: 20px"></div>
+                        </form>
+                        <div style="margin-left: 55px;">
+                            <div class="panel-body panel-top-border">
+                                <a href="moment_home.html">
+                                    <img src="/assets/img/user.jpg" class="img-responsive img-circle" title="vboar"
+                                         style="width: 40px; float: left; margin-right: 10px" />
+                                </a>
+                                <p class="small"><b>Vboar</b>： 感谢主页娘【哎是主页娘♀对吧】邮箱小编也非常亚撒西</p>
+                                <span class="small" style="color: #a0a0a0;">3分钟前</span>
+                                <a href="#" class="small pull-right">回复</a>
+                            </div>
+                            <div class="panel-body panel-top-border">
+                                <a href="moment_home.html">
+                                    <img src="/assets/img/user.jpg" class="img-responsive img-circle" title="vboar"
+                                         style="width: 40px; float: left; margin-right: 10px" />
+                                </a>
+                                <p class="small"><b>Vboar</b>： 感谢主页娘【哎是主页娘♀对吧】邮箱小编也非常亚撒西</p>
+                                <span class="small" style="color: #a0a0a0;">3分钟前</span>
+                                <a href="#" class="small pull-right">回复</a>
+                            </div>
+                            <div class="panel-body panel-top-border">
+                                <a href="moment_home.html">
+                                    <img src="/assets/img/user.jpg" class="img-responsive img-circle" title="vboar"
+                                         style="width: 40px; float: left; margin-right: 10px" />
+                                </a>
+                                <p class="small"><b>Vboar</b>： 感谢主页娘【哎是主页娘♀对吧】邮箱小编也非常亚撒西</p>
+                                <span class="small" style="color: #a0a0a0;">3分钟前</span>
+                                <a href="#" class="small pull-right">回复</a>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+                <div class="panel-top-border">
+                    <div class="panel-body">
+                        <a href="moment_home.html">
+                            <img src="/assets/img/user.jpg" class="img-responsive img-circle" title="vboar"
+                                 style="width: 70px; float: left; margin-right: 10px" />
+                        </a>
+                    <span class=""><b>Vboar</b><br/>传说：奶油和蛋糕走进了婚礼的殿堂，所以有了奶油蛋糕。[可怜]而深爱着奶油的面包只能把爱埋在心里，
+                        变成了一只泡芙。当你咬下第一口，你就会[心]上它。贝思客极致泡芙——你会爱上的泡芙。</span>
+                        <div class="clearfix" style="margin-bottom: 10px"></div>
+                        <img src="/assets/img/group_1.png" style="width: 150px; margin-left: 80px; margin-bottom: 10px">
+                        <p class="small" style="color: #a0a0a0; margin-left: 80px;">6分钟前</p>
+                        <div class="pull-right" style="margin-top: -10px">
+                            <a class="small comment-click">评论</a>&nbsp&nbsp&nbsp&nbsp
+                            <a href="#"><i class="fa fa-thumbs-o-up"> 127</i></a>
+                        </div>
+                    </div>
+                    <div class="panel-body panel-top-border comment-panel" style="background-color: #fafafa; display: none;">
+                        <form>
+                            <img src="/assets/img/user.jpg" class="img-responsive img-circle" title="vboar"
+                                 style="width: 40px; float: left; margin-right: 10px" />
+                        <textarea class="form-control" rows="1" id="comment-textArea"
+                                  style="resize: none; margin-bottom: 5px; float: right; width: 90%"></textarea>
+                            <div class="clearfix" style="margin-bottom: 10px"></div>
+                            <button type="submit" class="btn btn-primary btn-sm pull-right">评论</button>
+                            <div class="clearfix" style="margin-bottom: 20px"></div>
+                        </form>
+                        <div style="margin-left: 55px;">
+                            <div class="panel-body panel-top-border">
+                                <a href="moment_home.html">
+                                    <img src="/assets/img/user.jpg" class="img-responsive img-circle" title="vboar"
+                                         style="width: 40px; float: left; margin-right: 10px" />
+                                </a>
+                                <p class="small"><b>Vboar</b>： 感谢主页娘【哎是主页娘♀对吧】邮箱小编也非常亚撒西</p>
+                                <span class="small" style="color: #a0a0a0;">3分钟前</span>
+                                <a href="#" class="small pull-right">回复</a>
+                            </div>
+                            <div class="panel-body panel-top-border">
+                                <a href="moment_home.html">
+                                    <img src="/assets/img/user.jpg" class="img-responsive img-circle" title="vboar"
+                                         style="width: 40px; float: left; margin-right: 10px" />
+                                </a>
+                                <p class="small"><b>Vboar</b>： 感谢主页娘【哎是主页娘♀对吧】邮箱小编也非常亚撒西</p>
+                                <span class="small" style="color: #a0a0a0;">3分钟前</span>
+                                <a href="#" class="small pull-right">回复</a>
+                            </div>
+                            <div class="panel-body panel-top-border">
+                                <a href="moment_home.html">
+                                    <img src="/assets/img/user.jpg" class="img-responsive img-circle" title="vboar"
+                                         style="width: 40px; float: left; margin-right: 10px" />
+                                </a>
+                                <p class="small"><b>Vboar</b>： 感谢主页娘【哎是主页娘♀对吧】邮箱小编也非常亚撒西</p>
+                                <span class="small" style="color: #a0a0a0;">3分钟前</span>
+                                <a href="#" class="small pull-right">回复</a>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+            </div>
+
+
+
+        </div>
+
+    </div>
+
+</div>
+
+<footer class="navbar-fixed-bottom">
+    <div class="container">
+        <p>Copyright © 2015 知康 南京大学软件学院 Vboar </p>
+    </div>
+</footer>
+
+<style>
+    .comment-click {
+        cursor: pointer;
+    }
+</style>
+
+<script>
+    $(document).ready(function() {
+        $('.comment-click').click(function () {
+            $('.comment-panel').fadeToggle(200);
+        })
+    });
+</script>
+
+</body>
+</html>

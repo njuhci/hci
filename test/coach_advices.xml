@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<advices>
+    <advice>
+        <question_id>15</question_id>
+        <content>批量导入的教练建议xml—1</content>
+    </advice>
+    <advice>
+        <question_id>16</question_id>
+        <content>批量导入的教练建议xml—2</content>
+    </advice>
+    <advice>
+        <question_id>18</question_id>
+        <content>批量导入的教练建议xml—3</content>
+    </advice>
+    <advice>
+        <question_id>19</question_id>
+        <content>批量导入的教练建议xml—4</content>
+    </advice>
+    <advice>
+        <question_id>20</question_id>
+        <content>批量导入的教练建议xml—5</content>
+    </advice>
+</advices>

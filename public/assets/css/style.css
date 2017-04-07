@@ -1,0 +1,71 @@
+.navbar {
+    border: none;
+}
+
+.navbar .container {
+    padding-right: 0px;
+}
+
+.navbar-brand {
+    font-size: 25px;
+    font-weight: lighter;
+    margin-right: 50px;
+}
+
+.navbar-nav {
+    font-weight: lighter;
+}
+
+.navbar-nav .label {
+    position: absolute;
+    top: 9px;
+    right: 7px;
+    text-align: center;
+    font-size: 9px;
+    padding: 2px 3px;
+    line-height: .9;
+}
+
+body {
+    background-color: #E9EAEC;
+    padding-bottom: 70px;
+}
+
+footer {
+    height: 50px;
+    background-color: #34495E;
+    clear: both;
+}
+
+footer p {
+    color: #A3A3A3;
+    font-size: small;
+    text-align: center;
+    margin-top: 18px;
+}
+
+/** 回到顶部 **/
+#scrollUp {
+    background-image: url("../../img/top.png");
+    bottom: 70px;
+    right: 30px;
+    width: 38px;    /* Width of image */
+    height: 38px;   /* Height of image */
+}
+
+.panel-top-border {
+    border-top: solid 1px #e0e0e0;
+}
+
+.inline-title {
+    display: inline;
+}
+
+.panel-heading-up {
+    margin-bottom: -12px;
+}
+
+.welcome-join-button{
+    border-radius: 5%;
+
+}

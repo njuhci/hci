@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>通知 - 知康</title>
+    <link rel="stylesheet" href="/assets/css/bootstrap.css">
+    <link rel="stylesheet" href="/assets/css/font-awesome.css">
+    <link rel="stylesheet" href="/assets/css/style.css">
+    <script src="/assets/js/jquery-1.11.3.min.js"></script>
+    <script src="/assets/js/bootstrap.min.js"></script>
+    <script src="/assets/js/jquery.scrollUp.min.js"></script>
+    <script src="/assets/js/script.js"></script>
+    <link rel="stylesheet" href="/assets/plugins/iCheck/square/green.css">
+    <script src="/assets/plugins/iCheck/icheck.min.js"></script>
+</head>
+<body>
+
+<div class="navbar navbar-default">
+    <div class="container">
+        <div class="navbar-header">
+            <a href="welcome.html" class="navbar-brand">知康</a>
+            <button class="navbar-toggle" type="button" data-toggle="collapse" data-target="#navbar-main">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+        </div>
+        <div class="navbar-collapse collapse" id="navbar-main">
+            <ul class="nav navbar-nav">
+                <li><a href="index.html">首页</a></li>
+                <li><a href="health.html">健康</a></li>
+                <li><a href="activity.html">活动</a></li>
+                <li><a href="advice.html">建议</a></li>
+                <li><a href="moment.html">朋友圈</a></li>
+                <li><a href="group.html">兴趣组</a></li>
+            </ul>
+            <ul class="nav navbar-nav navbar-right">
+                <li>
+                    <a href="message.html" title="您有四条新的通知">
+                        <i class="fa fa-envelope-o"></i>
+                        <span class="label label-warning">4</span>
+                    </a>
+                </li>
+                <li class="dropdown nav-user">
+                    <a href="#" style="padding: 10px" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
+                        <img src="/assets/img/user.jpg" class="img-circle" style="width: 30px">
+                    </a>
+                    <ul class="dropdown-menu" role="menu">
+                        <li><a href="user_home.html">我的主页</a></li>
+                        <li><a href="setting.html">个人设置</a></li>
+                        <li class="divider"></li>
+                        <li><a href="#">帮助中心</a></li>
+                        <li><a href="#">建议反馈</a></li>
+                        <li class="divider"></li>
+                        <li><a href="login.html">登出</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+<div class="container">
+
+    <div class="row">
+
+        <div class="col-sm-3">
+            <div class="panel type-panel">
+                <div class="panel-heading">
+                    <h5 class="inline-title">通知类型</h5>
+                    <div class="pull-right">
+                        <a class="btn btn-primary btn-xs" data-toggle="modal" data-target="#type-setting-modal">设置</a>
+                    </div>
+                </div>
+                <div class="list-group small">
+                    <a href="#" class="list-group-item active">所有</a>
+                    <a href="#" class="list-group-item">系统通知</a>
+                    <a href="#" class="list-group-item">专家建议</a>
+                    <a href="#" class="list-group-item">好友申请</a>
+                    <a href="#" class="list-group-item">活动通知</a>
+                    <a href="#" class="list-group-item">朋友圈动态</a>
+                    <a href="#" class="list-group-item">兴趣组通知</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-sm-9">
+            <div class="panel message-panel">
+                <div class="panel-body message-body">
+                    [系统通知] 系统将于2015年10月31凌晨5点进行升级，对用户表示歉意。
+                </div>
+                <div class="panel-body message-body panel-top-border">
+                    <div class="row">
+                        <div class="col-md-11 col-sm-10">
+                            [专家建议] 您的提问“我太胖了”已有专家给出建议，请前往查看。[专家建议] 您的提问“我太胖了”已有专家给出建议，请前往查看。
+                        </div>
+                        <div class="col-md-1 col-sm-2">
+                            <a href="advice_detail.html" class="btn btn-primary btn-xs pull-right">前往查看</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="panel-body message-body panel-top-border">
+                    <div class="row">
+                        <div class="col-xs-11">
+                            [好友申请] 小野猪申请成为你的好友。
+                        </div>
+                        <div class="col-xs-1">
+                            <a href="friend_apply.html" class="btn btn-primary btn-xs pull-right">前往查看</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="panel-body message-body panel-top-border">
+                    <div class="row">
+                        <div class="col-xs-11">
+                            [好友申请] 小小野猪申请成为你的好友。
+                        </div>
+                        <div class="col-xs-1">
+                            <a href="friend_apply.html" class="btn btn-primary btn-xs pull-right">前往查看</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="panel-body message-body panel-top-border">
+                    <div class="row">
+                        <div class="col-xs-11">
+                            [好友申请] 中野猪申请成为你的好友。
+                        </div>
+                        <div class="col-xs-1">
+                            <a href="friend_apply.html" class="btn btn-primary btn-xs pull-right">前往查看</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="panel-body message-body panel-top-border have_read_panel">
+                    <div class="row">
+                        <div class="col-xs-11">
+                            [好友申请] 大野猪申请成为你的好友。
+                        </div>
+                        <div class="col-xs-1">
+                            <a href="friend_apply.html" class="btn btn-primary btn-xs pull-right">前往查看</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="panel-body message-body panel-top-border have_read_panel">
+                    <div class="row">
+                        <div class="col-xs-11">
+                            [好友申请] 大野猪申请成为你的好友。
+                        </div>
+                        <div class="col-xs-1">
+                            <a href="friend_apply.html" class="btn btn-primary btn-xs pull-right">前往查看</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="panel-body message-body panel-top-border have_read_panel">
+                    <div class="row">
+                        <div class="col-xs-11">
+                            [好友申请] 大野猪申请成为你的好友。
+                        </div>
+                        <div class="col-xs-1">
+                            <a href="friend_apply.html" class="btn btn-primary btn-xs pull-right">前往查看</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="panel-body message-body panel-top-border have_read_panel">
+                    <div class="row">
+                        <div class="col-xs-11">
+                            [好友申请] 大野猪申请成为你的好友。
+                        </div>
+                        <div class="col-xs-1">
+                            <a href="friend_apply.html" class="btn btn-primary btn-xs pull-right">前往查看</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="panel-body message-body panel-top-border have_read_panel">
+                    <div class="row">
+                        <div class="col-xs-11">
+                            [好友申请] 大野猪申请成为你的好友。
+                        </div>
+                        <div class="col-xs-1">
+                            <a href="friend_apply.html" class="btn btn-primary btn-xs pull-right">前往查看</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="panel-body message-body panel-top-border have_read_panel">
+                    <div class="row">
+                        <div class="col-xs-11">
+                            [好友申请] 大野猪申请成为你的好友。
+                        </div>
+                        <div class="col-xs-1">
+                            <a href="friend_apply.html" class="btn btn-primary btn-xs pull-right">前往查看</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="panel-body message-body panel-top-border have_read_panel">
+                    <div class="row">
+                        <div class="col-xs-11">
+                            [好友申请] 大野猪申请成为你的好友。
+                        </div>
+                        <div class="col-xs-1">
+                            <a href="friend_apply.html" class="btn btn-primary btn-xs pull-right">前往查看</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="panel-body message-body panel-top-border have_read_panel">
+                    <div class="row">
+                        <div class="col-xs-11">
+                            [好友申请] 大野猪申请成为你的好友。
+                        </div>
+                        <div class="col-xs-1">
+                            <a href="friend_apply.html" class="btn btn-primary btn-xs pull-right">前往查看</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="panel-body message-body panel-top-border have_read_panel">
+                    <div class="row">
+                        <div class="col-xs-11">
+                            [好友申请] 大野猪申请成为你的好友。
+                        </div>
+                        <div class="col-xs-1">
+                            <a href="friend_apply.html" class="btn btn-primary btn-xs pull-right">前往查看</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="panel-body message-body panel-top-border have_read_panel">
+                    <div class="row">
+                        <div class="col-xs-11">
+                            [好友申请] 大野猪申请成为你的好友。
+                        </div>
+                        <div class="col-xs-1">
+                            <a href="friend_apply.html" class="btn btn-primary btn-xs pull-right">前往查看</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="panel-body message-body panel-top-border have_read_panel">
+                    <div class="row">
+                        <div class="col-xs-11">
+                            [好友申请] 大野猪申请成为你的好友。
+                        </div>
+                        <div class="col-xs-1">
+                            <a href="friend_apply.html" class="btn btn-primary btn-xs pull-right">前往查看</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="loading">
+                <i class="fa fa-2x fa-spinner fa-pulse"></i>
+            </div>
+        </div>
+
+    </div>
+
+
+</div>
+
+<footer class="navbar-fixed-bottom">
+    <div class="container">
+        <p>Copyright © 2015 知康 南京大学软件学院 Vboar </p>
+    </div>
+</footer>
+
+<div class="modal fade" id="type-setting-modal" role="dialog" aria-labelledby="myModalTitle">
+    <div class="modal-dialog modal-sm">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+                <h5 class="modal-title" id="myModalTitle">接收通知类型设置</h5>
+            </div>
+            <form>
+                <div class="modal-body">
+                        <p class="small">系统通知、专家建议、好友申请不可自行设定。</p>
+                        <div class="checkbox">
+                            <label>
+                                <input type="checkbox" checked="checked"> 活动通知
+                            </label>
+                        </div>
+                        <div class="checkbox">
+                            <label>
+                                <input type="checkbox" checked="checked"> 兴趣组通知
+                            </label>
+                        </div>
+                        <div class="checkbox">
+                            <label>
+                                <input type="checkbox"> 朋友圈动态
+                            </label>
+                        </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="submit" class="btn btn-default btn-sm">取消</button>
+                    <button type="submit" class="btn btn-primary btn-sm">保存</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+<style>
+    #type-setting-modal {
+        top: 20%;
+    }
+
+    .have_read_panel {
+        background-color: #f3f3f3;
+        color: #969696;
+    }
+
+
+</style>
+
+<script>
+    $(document).ready(function(){
+        $('input').iCheck({
+            checkboxClass: 'icheckbox_square-green',
+            increaseArea: '20%' // optional
+        });
+    });
+</script>
+
+</body>
+</html>

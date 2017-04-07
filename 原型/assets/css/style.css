@@ -1,0 +1,113 @@
+.navbar {
+    border: none;
+}
+
+.navbar .container {
+    padding-right: 0px;
+}
+
+.navbar-brand {
+    font-size: 25px;
+    font-weight: lighter;
+    margin-right: 50px;
+}
+
+.navbar-nav {
+    font-weight: lighter;
+}
+
+.navbar-nav .label {
+    position: absolute;
+    top: 9px;
+    right: 7px;
+    text-align: center;
+    font-size: 9px;
+    padding: 2px 3px;
+    line-height: .9;
+}
+
+body {
+    background-color: #E9EAEC;
+    padding-bottom: 70px;
+}
+
+footer {
+    height: 50px;
+    background-color: #34495E;
+    clear: both;
+}
+
+footer p {
+    color: #A3A3A3;
+    font-size: small;
+    text-align: center;
+    margin-top: 18px;
+}
+
+
+.checkbox label, .radio-inline {
+    padding-left: 0px;
+}
+
+.loading {
+    text-align: center;
+    color: #a0a0a0;
+}
+
+.img-border {
+    border: solid 2px #1FA67A;
+}
+
+.img-margin-bottom {
+    margin-bottom: 15px;
+}
+
+.panel-top-border {
+    border-top: solid 1px #e0e0e0;
+}
+
+.inline-title {
+    display: inline;
+}
+
+.panel-heading-up {
+    margin-bottom: -12px;
+}
+
+/** 回到顶部 **/
+#scrollUp {
+    background-image: url("../img/top.png");
+    bottom: 70px;
+    right: 30px;
+    width: 38px;    /* Width of image */
+    height: 38px;   /* Height of image */
+}
+
+
+/** Group **/
+
+.group-post-brief .title, .group-post-brief .title:visited {
+    color: #6c6c6c;
+    font-size: 16px;
+}
+
+.group-post-brief .title:hover, .group-post-brief .title:active {
+    color: #3b3b3b;
+}
+
+.group-post-brief .footer {
+    font-size: small;
+    color: #a0a0a0;
+}
+
+.group-post-brief .view, .group-post-brief .reply {
+    background-color: #1FA67A;
+    color: #FFFFFF;
+    padding: 8px 10px 8px 10px;
+    text-align: center;
+    font-size: small;
+}
+
+.group-post-brief .reply {
+    margin-right: 10px;
+}

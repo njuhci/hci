@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>健康 - 运动 - 知康</title>
+    <link rel="stylesheet" href="/assets/css/bootstrap.css">
+    <link rel="stylesheet" href="/assets/css/font-awesome.css">
+    <link rel="stylesheet" href="/assets/css/style.css">
+    <script src="/assets/js/jquery-1.11.3.min.js"></script>
+    <script src="/assets/js/bootstrap.min.js"></script>
+    <script src="/assets/js/jquery.scrollUp.min.js"></script>
+    <script src="/assets/js/script.js"></script>
+    <script src="/assets/js/moment-with-locales.js"></script>
+    <link rel="stylesheet" href="/assets/plugins/DateTimePicker/css/bootstrap-datetimepicker.min.css">
+    <script src="/assets/plugins/DateTimePicker/js/bootstrap-datetimepicker.min.js"></script>
+</head>
+<body>
+
+<div class="navbar navbar-default">
+    <div class="container">
+        <div class="navbar-header">
+            <a href="welcome.html" class="navbar-brand">知康</a>
+            <button class="navbar-toggle" type="button" data-toggle="collapse" data-target="#navbar-main">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+        </div>
+        <div class="navbar-collapse collapse" id="navbar-main">
+            <ul class="nav navbar-nav">
+                <li><a href="index.html">首页</a></li>
+                <li class="active"><a href="health.html">健康</a></li>
+                <li><a href="activity.html">活动</a></li>
+                <li><a href="advice.html">建议</a></li>
+                <li><a href="moment.html">朋友圈</a></li>
+                <li><a href="group.html">兴趣组</a></li>
+            </ul>
+            <ul class="nav navbar-nav navbar-right">
+                <li>
+                    <a href="message.html" title="您有四条新的通知">
+                        <i class="fa fa-envelope-o"></i>
+                        <span class="label label-warning">4</span>
+                    </a>
+                </li>
+                <li class="dropdown nav-user">
+                    <a href="#" style="padding: 10px" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
+                        <img src="/assets/img/user.jpg" class="img-circle" style="width: 30px">
+                    </a>
+                    <ul class="dropdown-menu" role="menu">
+                        <li><a href="user_home.html">我的主页</a></li>
+                        <li><a href="setting.html">个人设置</a></li>
+                        <li class="divider"></li>
+                        <li><a href="#">帮助中心</a></li>
+                        <li><a href="#">建议反馈</a></li>
+                        <li class="divider"></li>
+                        <li><a href="login.html">登出</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+<div class="container">
+
+    <div class="row">
+
+        <div class="col-sm-3">
+
+            <div class="list-group">
+                <a href="health.html" class="list-group-item active">运动</a>
+                <a href="health_health.html" class="list-group-item">身体健康</a>
+                <a href="health_sleep.html" class="list-group-item">睡眠</a>
+            </div>
+
+        </div>
+
+        <div class="col-sm-9">
+
+            <div class="panel data-panel">
+
+                <div class="panel-heading">
+                    <h5 class="inline-title">运动数据</h5>
+                    <div class="pull-right">
+                        <a href="#" class="small">设置目标</a>
+                    </div>
+                </div>
+
+                <div class="panel-body panel-top-border">
+                    <div class="selector row">
+                        <div class="col-xs-6" style="position: relative; top: 10px">
+                            <a href="#">今日</a>
+                            <a href="#">本周</a>
+                            <a href="#">本月</a>
+                            <a href="#">有史以来</a>
+                        </div>
+                        <div class="col-xs-6">
+                            <div class='input-group date' id='date_picker'>
+                                <input type='text' class="form-control"/>
+                            <span class="input-group-addon">
+                                <span class="glyphicon glyphicon-calendar"></span>
+                            </span>
+                            </div>
+                        </div>
+                    </div>
+                    <div>
+                        运动时间
+                        <small style="position: relative; left: 100px">
+                            目标：100分钟&nbsp&nbsp&nbsp
+                            已完成：45分钟&nbsp&nbsp&nbsp
+                            完成度：45%&nbsp&nbsp&nbsp
+                        </small>
+                        <div class="progress progress-striped active">
+                            <div class="progress-bar" style="width: 45%"></div>
+                        </div>
+                    </div>
+                    <div>
+                        燃烧热量
+                        <small style="position: relative; left: 100px">
+                            目标：100大卡&nbsp&nbsp&nbsp
+                            已完成：50大卡&nbsp&nbsp&nbsp
+                            完成度：50%&nbsp&nbsp&nbsp
+                        </small>
+                        <div class="progress progress-striped active">
+                            <div class="progress-bar progress-bar-warning" style="width: 50%"></div>
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="panel-body panel-top-border">
+                    <div class="row">
+                        <div class="col-xs-4">
+                            <h5>跑步</h5>
+                            <div class="small">
+                                <p>运动时长：15分钟</p>
+                                <p>运动距离：5公里</p>
+                                <p>燃烧热量：30大卡</p>
+                                <p>运动步数：1000步</p>
+
+                            </div>
+                        </div>
+                        <div class="col-xs-4">
+                            <h5>步行</h5>
+                            <div class="small">
+                                <p>运动时长：15分钟</p>
+                                <p>运动距离：5公里</p>
+                                <p>燃烧热量：30大卡</p>
+                                <p>运动步数：1000步</p>
+
+                            </div>
+                        </div>
+                        <div class="col-xs-4">
+                            <h5>健身</h5>
+                            <div class="small">
+                                <p>运动时长：15分钟</p>
+                                <p>燃烧热量：30大卡</p>
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+
+                        <div class="col-xs-4">
+                            <h5>游泳</h5>
+                            <div class="small">
+                                <p>运动时长：15分钟</p>
+                                <p>运动距离：5公里</p>
+                                <p>燃烧热量：30大卡</p>
+
+                            </div>
+                        </div>
+                        <div class="col-xs-4">
+                            <h5>骑行</h5>
+                            <div class="small">
+                                <p>运动时长：15分钟</p>
+                                <p>运动距离：5公里</p>
+                                <p>燃烧热量：30大卡</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="panel-body panel-top-border">
+                    <h5>运动一览</h5>
+                    <table class="table table-striped table-hover small">
+                        <thead>
+                        <tr>
+                            <th>ID</th>
+                            <th>运动类型</th>
+                            <th>开始时间</th>
+                            <th>结束时间</th>
+                            <th>运动时长（分钟）</th>
+                            <th>燃烧热量（大卡）</th>
+                            <th>运动距离（公里）</th>
+                            <th>运动步数</th>
+                        </tr>
+                        </thead>
+                        <tbody style="text-align: center">
+                        <tr>
+                            <td>1</td>
+                            <td>步行</td>
+                            <td>2015/11/1 16:55</td>
+                            <td>2015/11/1 17:30</td>
+                            <td>35</td>
+                            <td>10</td>
+                            <td>1</td>
+                            <td>1000</td>
+                        </tr>
+                        <tr>
+                            <td>1</td>
+                            <td>步行</td>
+                            <td>2015/11/1 16:55</td>
+                            <td>2015/11/1 17:30</td>
+                            <td>35</td>
+                            <td>10</td>
+                            <td>1</td>
+                            <td>1000</td>
+                        </tr>
+                        <tr>
+                            <td>1</td>
+                            <td>步行</td>
+                            <td>2015/11/1 16:55</td>
+                            <td>2015/11/1 17:30</td>
+                            <td>35</td>
+                            <td>10</td>
+                            <td>1</td>
+                            <td>1000</td>
+                        </tr>
+                        <tr>
+                            <td>1</td>
+                            <td>步行</td>
+                            <td>2015/11/1 16:55</td>
+                            <td>2015/11/1 17:30</td>
+                            <td>35</td>
+                            <td>10</td>
+                            <td>1</td>
+                            <td>1000</td>
+                        </tr>
+                        <tr>
+                            <td>1</td>
+                            <td>步行</td>
+                            <td>2015/11/1 16:55</td>
+                            <td>2015/11/1 17:30</td>
+                            <td>35</td>
+                            <td>10</td>
+                            <td>1</td>
+                            <td>1000</td>
+                        </tr>
+                        </tbody>
+                    </table>
+                    <a href="#" class="pull-right small">更多</a>
+                </div>
+
+            </div>
+
+            <div class="panel analysis-panel">
+
+                <div class="panel-heading">
+                    <h5 class="inline-title">统计分析</h5>
+                </div>
+
+                <div class="panel-body panel-top-border">
+                    统计分析将用文字和图表结合，TODO
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+<footer class="navbar-fixed-bottom">
+    <div class="container">
+        <p>Copyright © 2015 知康 南京大学软件学院 Vboar </p>
+    </div>
+</footer>
+
+<style>
+    .selector a {
+        margin-right: 15px;
+    }
+
+    .selector {
+        margin-bottom: 15px;
+    }
+
+</style>
+
+<script>
+    $('#date_picker').datetimepicker({
+        locale: 'zh-CN',
+        format: 'YYYY 年 MM 月 D 日'
+    });
+</script>
+
+</body>
+</html>

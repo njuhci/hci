@@ -1,0 +1,658 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>首页 - 知康</title>
+    <link rel="stylesheet" href="/assets/css/bootstrap.css">
+    <link rel="stylesheet" href="/assets/css/font-awesome.css">
+    <link rel="stylesheet" href="/assets/css/style.css">
+    <script src="/assets/js/jquery-1.11.3.min.js"></script>
+    <script src="/assets/js/bootstrap.min.js"></script>
+    <script src="/assets/js/jquery.scrollUp.min.js"></script>
+    <script src="/assets/js/script.js"></script>
+</head>
+<body>
+
+<div class="navbar navbar-default">
+    <div class="container">
+        <div class="navbar-header">
+            <a href="welcome.html" class="navbar-brand">知康</a>
+            <button class="navbar-toggle" type="button" data-toggle="collapse" data-target="#navbar-main">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+        </div>
+        <div class="navbar-collapse collapse" id="navbar-main">
+            <ul class="nav navbar-nav">
+                <li class="active"><a href="index.html">首页</a></li>
+                <li><a href="health.html">健康</a></li>
+                <li><a href="activity.html">活动</a></li>
+                <li><a href="advice.html">建议</a></li>
+                <li><a href="moment.html">朋友圈</a></li>
+                <li><a href="group.html">兴趣组</a></li>
+            </ul>
+            <ul class="nav navbar-nav navbar-right">
+                <li>
+                    <a href="message.html" title="您有四条新的通知">
+                        <i class="fa fa-envelope-o"></i>
+                        <span class="label label-warning">4</span>
+                    </a>
+                </li>
+                <li class="dropdown nav-user">
+                    <a href="#" style="padding: 10px" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
+                        <img src="/assets/img/user.jpg" class="img-circle" style="width: 30px">
+                    </a>
+                    <ul class="dropdown-menu" role="menu">
+                        <li><a href="user_home.html">我的主页</a></li>
+                        <li><a href="setting.html">个人设置</a></li>
+                        <li class="divider"></li>
+                        <li><a href="#">帮助中心</a></li>
+                        <li><a href="#">建议反馈</a></li>
+                        <li class="divider"></li>
+                        <li><a href="login.html">登出</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+<div class="container">
+
+    <div class="row">
+
+        <div class="col-md-3">
+
+            <div class="panel user-panel">
+                <div class="panel-body">
+                    <div class="col-xs-offset-1 col-xs-10">
+                        <img src="/assets/img/user.jpg" class="img-responsive img-rounded" >
+                    </div>
+                    <div class="col-xs-offset-1 col-xs-6">
+                        <b>Vboar</b><br/>
+                        王振聪
+                    </div>
+                    <div class="col-xs-5">
+                        <div class="pull-right">
+                            <small>
+                                <a href="user_home.html">个人主页</a><br/>
+                                <a href="setting.html">个人设置</a>
+                            </small>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="panel rank-panel">
+                <div class="panel-heading">
+                    <h5 class="inline-title">当日运动排行榜</h5>
+                    <div class="pull-right">
+                        <a href="rank.html" class="small">查看更多榜单</a>
+                    </div>
+                </div>
+                <div class="panel-body user-rank panel-top-border">
+                    <div class="row">
+                        <div class="col-xs-2 rank-number">
+                            <i class="h2">1</i>
+                        </div>
+                        <div class="col-xs-4">
+                            <a href="user_home.html" title="小明">
+                                <img src="/assets/img/group_1.png" class="img-responsive img-border">
+                            </a>
+                        </div>
+                        <div class="col-xs-6">
+                            <div class="progress progress-striped active" style="width: 100%">
+                                <div class="progress-bar" style="width: 100%"></div>
+                            </div>
+                            250 大卡
+                        </div>
+                    </div>
+                </div>
+                <div class="panel-body user-rank panel-top-border">
+                    <div class="row">
+                        <div class="col-xs-2 rank-number">
+                            <i class="h2">2</i>
+                        </div>
+                        <div class="col-xs-4">
+                            <a href="user_home.html" title="小洪">
+                                <img src="/assets/img/group_2.jpg" class="img-responsive img-border">
+                            </a>
+                        </div>
+                        <div class="col-xs-6">
+                            <div class="progress progress-striped active" style="width: 80%">
+                                <div class="progress-bar" style="width: 100%"></div>
+                            </div>
+                            200 大卡
+                        </div>
+                    </div>
+                </div>
+                <div class="panel-body user-rank panel-top-border">
+                    <div class="row">
+                        <div class="col-xs-2 rank-number">
+                            <i class="h2">3</i>
+                        </div>
+                        <div class="col-xs-4">
+                            <a href="user_home.html" title="小白">
+                                <img src="/assets/img/group_3.jpg" class="img-responsive img-border">
+                            </a>
+                        </div>
+                        <div class="col-xs-6">
+                            <div class="progress progress-striped active" style="width: 70%">
+                                <div class="progress-bar" style="width: 100%"></div>
+                            </div>
+                            180 大卡
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="panel moments-panel">
+                <div class="panel-heading">
+                    <h5 class="inline-title">朋友圈动态</h5>
+                    <div class="pull-right">
+                        <a href="moment.html" class="small">前往朋友圈</a>
+                    </div>
+                </div>
+                <div class="panel-body panel-top-border">
+                    <div class="row">
+                        <div class="col-xs-4">
+                            <a href="user_home.html" title="小明">
+                                <img src="/assets/img/group_1.png" class="img-responsive img-border img-margin-bottom">
+                            </a>
+                        </div>
+                        <a href="moment.html" class="small">今天跑了十多圈，真是累死了本宝宝了……</a>
+                    </div>
+                </div>
+                <div class="panel-body panel-top-border">
+                    <div class="row">
+                        <div class="col-xs-4">
+                            <a href="user_home.html" title="小明">
+                                <img src="/assets/img/group_1.png" class="img-responsive img-border img-margin-bottom">
+                            </a>
+                        </div>
+                        <a href="moment.html" class="small">今天跑了十多圈，真是累死了本宝宝了……</a>
+                    </div>
+                </div>
+                <div class="panel-body panel-top-border">
+                    <div class="row">
+                        <div class="col-xs-4">
+                            <a href="user_home.html" title="小明">
+                                <img src="/assets/img/group_1.png" class="img-responsive img-border img-margin-bottom">
+                            </a>
+                        </div>
+                        <a href="moment.html" class="small">今天跑了十多圈，真是累死了本宝宝了……</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="panel friends-panel">
+                <div class="panel-heading panel-heading-up">
+                    <h5 class="inline-title">我的好友</h5>
+                    <div class="pull-right">
+                        <a href="friend.html" class="small">查看所有好友</a>
+                    </div>
+                </div>
+                <div class="panel-body">
+                    <div class="row">
+                        <div class="col-xs-4">
+                            <a href="user_home.html" title="小明">
+                                <img src="/assets/img/group_1.png" class="img-responsive img-border img-margin-bottom">
+                            </a>
+                        </div>
+                        <div class="col-xs-4">
+                            <a href="user_home.html" title="小洪">
+                                <img src="/assets/img/group_2.jpg" class="img-responsive img-border img-margin-bottom">
+                            </a>
+                        </div>
+                        <div class="col-xs-4">
+                            <a href="user_home.html" title="小白">
+                                <img src="/assets/img/group_3.jpg" class="img-responsive img-border img-margin-bottom">
+                            </a>
+                        </div>
+                        <div class="col-xs-4">
+                            <a href="user_home.html" title="小明">
+                                <img src="/assets/img/group_4.jpg" class="img-responsive img-border img-margin-bottom">
+                            </a>
+                        </div>
+                        <div class="col-xs-4">
+                            <a href="user_home.html" title="小明">
+                                <img src="/assets/img/group_5.jpg" class="img-responsive img-border img-margin-bottom">
+                            </a>
+                        </div>
+                        <div class="col-xs-4">
+                            <a href="user_home.html" title="小明">
+                                <img src="/assets/img/group_6.jpg" class="img-responsive img-border img-margin-bottom">
+                            </a>
+                        </div>
+                        <div class="col-xs-4">
+                            <a href="user_home.html" title="小明">
+                                <img src="/assets/img/group_4.jpg" class="img-responsive img-border img-margin-bottom">
+                            </a>
+                        </div>
+                        <div class="col-xs-4">
+                            <a href="user_home.html" title="小明">
+                                <img src="/assets/img/group_5.jpg" class="img-responsive img-border img-margin-bottom">
+                            </a>
+                        </div>
+                        <div class="col-xs-4">
+                            <a href="user_home.html" title="小明">
+                                <img src="/assets/img/group_6.jpg" class="img-responsive img-border img-margin-bottom">
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="col-md-6">
+
+            <div class="panel health-panel">
+                <div class="panel-heading panel-heading-up">
+                    <h5 class="inline-title">今日健康数据</h5>
+                    <div class="pull-right">
+                        <a href="health.html" class="small">更多数据</a>
+                    </div>
+                </div>
+                <div class="panel-body">
+                    <ul class="nav nav-tabs">
+                        <li class="active"><a href="#sports" data-toggle="tab" aria-expanded="true">运动</a></li>
+                        <li class=""><a href="#health" data-toggle="tab" aria-expanded="false">身体健康</a></li>
+                        <li class=""><a href="#sleep" data-toggle="tab" aria-expanded="false">睡眠</a></li>
+                    </ul>
+                    <div id="myTabContent" class="tab-content">
+                        <div class="tab-pane fade active in" id="sports">
+                            <div class="sub-content">
+                                <p>您今天一共运动 <i class="big-number">125</i> 分钟，燃烧热量 <i class="big-number">125</i> 大卡。继续努力哦~</p>
+                                <li class="small">跑步：
+                                    运动时长 <i class="small-number">125</i> 分钟，
+                                    运动距离 <i class="small-number">10</i> 公里，
+                                    燃烧热量 <i class="small-number">125</i> 大卡
+                                </li>
+                                <li class="small">步行：
+                                    运动时长 <i class="small-number">0</i> 分钟，
+                                    运动距离 <i class="small-number">0</i> 公里，
+                                    燃烧热量 <i class="small-number">0</i> 大卡
+                                </li>
+                                <li class="small">健身：
+                                    运动时长 <i class="small-number">0</i> 分钟，
+                                    运动距离 <i class="small-number">0</i> 公里，
+                                    燃烧热量 <i class="small-number">0</i> 大卡
+                                </li>
+                                <li class="small">游泳：
+                                    运动时长 <i class="small-number">0</i> 分钟，
+                                    运动距离 <i class="small-number">0</i> 公里，
+                                    燃烧热量 <i class="small-number">0</i> 大卡
+                                </li>
+                                <li class="small">骑行：
+                                    运动时长 <i class="small-number">0</i> 分钟，
+                                    运动距离 <i class="small-number">0</i> 公里，
+                                    燃烧热量 <i class="small-number">0</i> 大卡
+                                </li>
+                                <div class="pull-right">
+                                    <a href="health.html" class="btn btn-primary btn-sm btn-detail">查看详细数据</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="tab-pane fade" id="health">
+                            <div class="sub-content">
+                                <p>您最近的一次身体测量数据如下：</p>
+                                <table class="table table-striped table-hover small">
+                                    <tbody>
+                                    <tr>
+                                        <td>身高</td>
+                                        <td>170 cm</td>
+                                    </tr>
+                                    <tr>
+                                        <td>体重</td>
+                                        <td>56 kg</td>
+                                    </tr>
+                                    <tr>
+                                        <td>脂肪率</td>
+                                        <td>12.5%</td>
+                                    </tr>
+                                    <tr>
+                                        <td>脂肪率</td>
+                                        <td>12.5%</td>
+                                    </tr>
+                                    <tr>
+                                        <td>肌肉率</td>
+                                        <td>50.8%</td>
+                                    </tr>
+                                    <tr>
+                                        <td>内脏脂肪</td>
+                                        <td>1</td>
+                                    </tr>
+                                    <tr>
+                                        <td>基础代谢率</td>
+                                        <td>66.7%</td>
+                                    </tr>
+                                    <tr>
+                                        <td>水分率</td>
+                                        <td>70.9%</td>
+                                    </tr>
+                                    <tr>
+                                        <td>蛋白质</td>
+                                        <td>26.7%</td>
+                                    </tr>
+                                    <tr>
+                                        <td>骨量</td>
+                                        <td>
+                                            28 kg
+                                            <div class="pull-right">
+                                                <div class="label label-warning">
+                                                    注意
+                                                </div>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>BMI</td>
+                                        <td>
+                                            20
+                                            <div class="pull-right">
+                                                <div class="label label-primary">
+                                                    优秀
+                                                </div>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>心率</td>
+                                        <td>80</td>
+                                    </tr>
+                                    <tr>
+                                        <td>血压</td>
+                                        <td>125/80</td>
+                                    </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                        <div class="tab-pane fade" id="sleep">
+                            <div class="sub-content">
+                                <p style="display: inline">最近一次睡眠状况</p>
+                                <div class="pull-right">
+                                    <small class="sleep_time">2015/10/29 晚</small>
+                                </div>
+                                <table class="table table-striped table-hover small" style="margin-top: 10px">
+                                    <tbody>
+                                    <tr>
+                                        <td>睡眠开始</td>
+                                        <td>23:59</td>
+                                    </tr>
+                                    <tr>
+                                        <td>睡眠结束</td>
+                                        <td>07:59</td>
+                                    </tr>
+                                    <tr>
+                                        <td>睡眠时长</td>
+                                        <td>8小时</td>
+                                    </tr>
+                                    <tr>
+                                        <td>深度睡眠时长</td>
+                                        <td>5小时50分</td>
+                                    </tr>
+                                    <tr>
+                                        <td>唤醒次数</td>
+                                        <td>0</td>
+                                    </tr>
+                                    <tr>
+                                        <td>睡眠质量评分</td>
+                                        <td>80</td>
+                                    </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="panel advice-panel">
+                <div class="panel-heading">
+                    <h5 class="inline-title">我的提问</h5>
+                    <div class="pull-right">
+                        <a href="advice_question.html" class="small">更多</a>
+                    </div>
+                </div>
+                <div class="panel-body panel-top-border">
+                    <div class="heading inline-title"><a href="advice_detail.html">请问各位教练，我现在很胖，请问怎么减肥啊？</a></div>
+                    <div class="pull-right">
+                        <span class="label label-primary">2 回答</span>
+                    </div>
+                </div>
+                <div class="panel-body panel-top-border">
+                    <div class="heading inline-title"><a href="advice_detail.html">请问各位教练，我现在很胖，请问怎么减肥啊？</a></div>
+                    <div class="pull-right">
+                        <span class="label label-primary">2 回答</span>
+                    </div>
+                </div>
+                <div class="panel-body panel-top-border">
+                    <div class="heading inline-title"><a href="advice_detail.html">请问各位教练，我现在很胖，请问怎么减肥啊？</a></div>
+                    <div class="pull-right">
+                        <span class="label label-primary">2 回答</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="panel article-panel">
+                <div class="panel-heading">
+                    <h5 class="inline-title">专家专栏</h5>
+                    <div class="pull-right">
+                        <a href="article.html" class="small">更多</a>
+                    </div>
+                </div>
+                <div class="panel-body panel-top-border">
+                    <div class="heading inline-title"><a href="article_detail.html">给爱健身的人几个有用的建议和技巧</a></div>
+                    <div class="pull-right">
+                        <span class="label label-primary">12 评论</span>
+                    </div>
+                </div>
+                <div class="panel-body panel-top-border">
+                    <div class="heading inline-title"><a href="article_detail.html">给爱健身的人几个有用的建议和技巧</a></div>
+                    <div class="pull-right">
+                        <span class="label label-primary">12 评论</span>
+                    </div>
+                </div>
+                <div class="panel-body panel-top-border">
+                    <div class="heading inline-title"><a href="article_detail.html">给爱健身的人几个有用的建议和技巧</a></div>
+                    <div class="pull-right">
+                        <span class="label label-primary">12 评论</span>
+                    </div>
+                </div>
+                <div class="panel-body panel-top-border">
+                    <div class="heading inline-title"><a href="article_detail.html">给爱健身的人几个有用的建议和技巧</a></div>
+                    <div class="pull-right">
+                        <span class="label label-primary">12 评论</span>
+                    </div>
+                </div>
+                <div class="panel-body panel-top-border">
+                    <div class="heading inline-title"><a href="article_detail.html">给爱健身的人几个有用的建议和技巧</a></div>
+                    <div class="pull-right">
+                        <span class="label label-primary">12 评论</span>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="col-md-3">
+
+            <div class="panel activities-panel">
+                <div class="panel-heading">
+                    <h5 class="inline-title">我的活动</h5>
+                    <div class="pull-right">
+                        <a href="activity.html" class="small">更多活动</a>
+                    </div>
+                </div>
+                <div class="panel-body panel-top-border">
+                    <div class="small heading">[ 骑行小组 ] <a href="activity_home.html">玄武湖百人骑行大赛</a></div>
+                    <div class="small pull-right time" >2015年10月30日上午9点</div>
+                </div>
+                <div class="panel-body panel-top-border">
+                    <div class="small heading">[ 骑行小组 ] <a href="activity_home.html">玄武湖百人骑行大赛</a></div>
+                    <div class="small pull-right time" >2015年10月30日上午9点</div>
+                </div>
+                <div class="panel-body panel-top-border">
+                    <div class="small heading">[ 骑行小组 ] <a href="activity_home.html">玄武湖百人骑行大赛</a></div>
+                    <div class="small pull-right time" >2015年10月30日上午9点</div>
+                </div>
+                <div class="panel-body panel-top-border">
+                    <div class="small heading">[ 骑行小组 ] <a href="activity_home.html">玄武湖百人骑行大赛</a></div>
+                    <div class="small pull-right time" >2015年10月30日上午9点</div>
+                </div>
+                <div class="panel-body panel-top-border">
+                    <div class="small heading">[ 骑行小组 ] <a href="activity_home.html">玄武湖百人骑行大赛</a></div>
+                    <div class="small pull-right time" >2015年10月30日上午9点</div>
+                </div>
+            </div>
+
+            <div class="panel posts-panel">
+                <div class="panel-heading">
+                    <h5 class="inline-title">兴趣组热门</h5>
+                    <div class="pull-right">
+                        <a href="group.html" class="small">更多</a>
+                    </div>
+                </div>
+                <div class="panel-body panel-top-border">
+                    <div class="small heading"> <a href="group_post.html">你好世界，欢迎你来到了骑行小组。</a></div>
+                    <div class="small footer" >
+                        <a href="group_home.html">骑行小组</a>&nbsp&nbsp&nbsp&nbsp
+                        来自 • <a href="user_home.html">终焉的终焉</a>
+                    </div>
+                </div>
+                <div class="panel-body panel-top-border">
+                    <div class="small heading"> <a href="group_post.html">你好世界，欢迎你来到了骑行小组。</a></div>
+                    <div class="small footer" >
+                        <a href="group_home.html">骑行小组</a>&nbsp&nbsp&nbsp&nbsp
+                        来自 • <a href="user_home.html">终焉的终焉</a>
+                    </div>
+                </div>
+                <div class="panel-body panel-top-border">
+                    <div class="small heading"> <a href="group_post.html">你好世界，欢迎你来到了骑行小组。</a></div>
+                    <div class="small footer" >
+                        <a href="group_home.html">骑行小组</a>&nbsp&nbsp&nbsp&nbsp
+                        来自 • <a href="user_home.html">终焉的终焉</a>
+                    </div>
+                </div>
+                <div class="panel-body panel-top-border">
+                    <div class="small heading"> <a href="group_post.html">你好世界，欢迎你来到了骑行小组。</a></div>
+                    <div class="small footer" >
+                        <a href="group_home.html">骑行小组</a>&nbsp&nbsp&nbsp&nbsp
+                        来自 • <a href="user_home.html">终焉的终焉</a>
+                    </div>
+                </div>
+                <div class="panel-body panel-top-border">
+                    <div class="small heading"> <a href="group_post.html">你好世界，欢迎你来到了骑行小组。</a></div>
+                    <div class="small footer" >
+                        <a href="group_home.html">骑行小组</a>&nbsp&nbsp&nbsp&nbsp
+                        来自 • <a href="user_home.html">终焉的终焉</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="panel groups-panel">
+                <div class="panel-heading panel-heading-up">
+                    <h5 class="inline-title">我的兴趣组</h5>
+                    <div class="pull-right">
+                        <a href="group_my.html" class="small">查看更多</a>
+                    </div>
+                </div>
+                <div class="panel-body">
+                    <div class="row">
+                        <div class="col-xs-4">
+                            <a href="group_home.html"><img src="/assets/img/group_1.png" class="img-responsive img-border img-margin-bottom" title="骑行小组"></a>
+                        </div>
+                        <div class="col-xs-4">
+                            <a href="group_home.html"><img src="/assets/img/group_2.jpg" class="img-responsive img-border img-margin-bottom" title="骑行小组"></a>
+                        </div>
+                        <div class="col-xs-4">
+                            <a href="group_home.html"><img src="/assets/img/group_3.jpg" class="img-responsive img-border img-margin-bottom" title="骑行小组"></a>
+                        </div>
+                        <div class="col-xs-4">
+                            <a href="group_home.html"><img src="/assets/img/group_4.jpg" class="img-responsive img-border img-margin-bottom" title="骑行小组"></a>
+                        </div>
+                        <div class="col-xs-4">
+                            <a href="group_home.html"><img src="/assets/img/group_5.jpg" class="img-responsive img-border img-margin-bottom" title="骑行小组"></a>
+                        </div>
+                        <div class="col-xs-4">
+                            <a href="group_home.html"><img src="/assets/img/group_6.jpg" class="img-responsive img-border img-margin-bottom" title="骑行小组"></a>
+                        </div>
+                        <div class="col-xs-4">
+                            <a href="group_home.html"><img src="/assets/img/group_7.png" class="img-responsive img-border img-margin-bottom" title="骑行小组"></a>
+                        </div>
+                        <div class="col-xs-4">
+                            <a href="group_home.html"><img src="/assets/img/group_1.png" class="img-responsive img-border img-margin-bottom" title="骑行小组"></a>
+                        </div>
+                        <div class="col-xs-4">
+                            <a href="group_home.html"><img src="/assets/img/group_2.jpg" class="img-responsive img-border img-margin-bottom" title="骑行小组"></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+
+
+<footer class="navbar-fixed-bottom">
+    <div class="container">
+        <p>Copyright © 2015 知康 南京大学软件学院 Vboar </p>
+    </div>
+</footer>
+
+<style>
+    .user-panel img {
+        border-radius: 6px;
+        margin-bottom: 10px;
+    }
+
+    .user-rank .rank-number {
+        padding: 10px;
+    }
+
+    .activities-panel .time, .posts-panel .footer {
+        margin-top: 5px;
+        margin-bottom: -5px;
+        color: #a0a0a0;
+    }
+
+    .health-panel .sub-content {
+        padding: 10px 0px 0px 10px;
+    }
+
+    .health-panel .sub-content .big-number {
+        font-size: 25px;
+        color: #ff6a46;
+        font-weight: bold;
+    }
+
+    .health-panel .sub-content .small-number {
+        font-size: 18px;
+        color: #ff6a46;
+    }
+
+    .advice-panel .label, .article-panel .label {
+
+    }
+
+    .moments-panel .panel-body {
+        margin-bottom: -15px;
+    }
+
+    .health-panel .sleep_time {
+        color: #a0a0a0;
+    }
+
+</style>
+
+</body>
+</html>

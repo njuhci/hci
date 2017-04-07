@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>注册 - 知康</title>
+    <link rel="stylesheet" href="/assets/css/bootstrap.css">
+    <link rel="stylesheet" href="/assets/css/font-awesome.css">
+    <link rel="stylesheet" href="/assets/css/style.css">
+    <script src="/assets/js/jquery-1.11.3.min.js"></script>
+    <script src="/assets/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="/assets/plugins/iCheck/square/green.css">
+    <script src="/assets/plugins/iCheck/icheck.min.js"></script>
+</head>
+<body>
+
+<div class="navbar navbar-default">
+    <div class="container">
+        <div class="navbar-header">
+            <a href="welcome.html" class="navbar-brand">知康</a>
+            <button class="navbar-toggle" type="button" data-toggle="collapse" data-target="#navbar-main">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+        </div>
+        <div class="navbar-collapse collapse" id="navbar-main">
+            <ul class="nav navbar-nav">
+                <li><a href="index.html">首页</a></li>
+                <li><a href="health.html">健康</a></li>
+                <li><a href="activity.html">活动</a></li>
+                <li><a href="advice.html">建议</a></li>
+                <li><a href="moment.html">朋友圈</a></li>
+                <li><a href="group.html">兴趣组</a></li>
+            </ul>
+            <ul class="nav navbar-nav navbar-right">
+                <li><a href="login.html">登录</a></li>
+                <li class="active"><a href="register.html">注册</a></li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+<div class="container">
+    <div class="col-sm-offset-3 col-sm-6 register-panel">
+        <div class="panel panel-primary">
+            <div class="panel-heading">
+                <h3 class="panel-title">知康&nbsp&nbsp&nbsp
+                    <i class="fa fa-angle-right"></i>&nbsp&nbsp&nbsp
+                    注册&nbsp
+                    <i class="fa fa-user"></i>
+                </h3>
+            </div>
+            <div class="panel-body">
+                <div class="row">
+                    <div class="col-sm-offset-1 col-sm-10">
+                        <div class="form-group">
+                            <label for="username" class="sr-only">用户名</label>
+                            <input type="text" class="form-control" id="username" placeholder="用户名">
+                        </div>
+                        <div class="form-group">
+                            <label for="email" class="sr-only">邮箱</label>
+                            <input type="text" class="form-control" id="email" placeholder="邮箱">
+                        </div>
+                        <div class="form-group">
+                            <label for="password" class="sr-only">密码</label>
+                            <input type="password" class="form-control" id="password" placeholder="密码">
+                        </div>
+                        <div class="form-group">
+                            <label for="passwordAgain" class="sr-only">再次输入密码</label>
+                            <input type="password" class="form-control" id="passwordAgain" placeholder="再次输入密码">
+                        </div>
+                        <div class="row">
+                            <div class="col-sm-8">
+                                <div class="checkbox icheck">
+                                    <label>
+                                        <input type="checkbox" name="iCheck">
+                                        同意知康服务条款
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="col-sm-4">
+                                <button type="submit" class="btn btn-primary pull-right">注册</button>
+                            </div>
+                        </div>
+                        <div class="register-footer">
+                            <a href="#">知康服务条款</a>
+                            <a href="login.html" class="pull-right">已有账号，前往登录</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<footer class="navbar-fixed-bottom">
+    <div class="container">
+        <p>Copyright © 2015 知康 南京大学软件学院 Vboar </p>
+    </div>
+</footer>
+
+<style>
+    .register-panel {
+        margin-top: 20px;
+    }
+
+    .panel-title {
+        font-weight: lighter;
+    }
+
+    .register-footer {
+        clear: both;
+        font-size: small;
+    }
+
+    .panel-body .row {
+        margin-top: 15px;
+        margin-bottom: 15px;
+    }
+
+    .checkbox label {
+        padding-left: 0px;
+
+    }
+
+</style>
+
+<script>
+    $(document).ready(function(){
+        $('input').iCheck({
+            checkboxClass: 'icheckbox_square-green',
+            increaseArea: '20%' // optional
+        });
+    });
+</script>
+
+</body>
+</html>
