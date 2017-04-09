@@ -46,8 +46,8 @@ class HealthController extends Controller
             sum(step) as step from data_sports where date(start_time) >= ?
             and date(start_time) <= ? and user_id = ?', [$start, $end, \Auth::user()->id]);
         $result = $result[0];
-        $result->heat = 500;
-        $result->step = 15780;
+        $result->heat = 300;
+        $result->step = 13300;
         $result->distance = 12.5;
         $goal = \Auth::user()->goal;
         $per = array();
@@ -148,12 +148,12 @@ class HealthController extends Controller
             $flag = 0;
         }
 
-        $data->start_time = "2017-04-05 02:15:20";
+        $data->start_time = "2017-04-05 01:15:20";
         $data->end_time = "2017-04-05 10:01:52";
-        $data->sleeping_time = "8:00:15";
-        $data->wake_up_times = 5;
-        $data->deep_sleeping_time = "00:00:00";
-        $data->sleep_points = 80.25;
+        $data->sleeping_time = "9:00:15";
+        $data->wake_up_times = 0;
+        $data->deep_sleeping_time = "7:48:00";
+        $data->sleep_points = 92.25;
 
         return view('health/sleep', compact('data', 'flag'));
     }

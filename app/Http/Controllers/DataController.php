@@ -36,7 +36,7 @@ class DataController extends Controller
             'distance'=>$_POST['distance'],
             'step'=>$_POST['step'],
         ]);
-        return redirect('/health/sport');
+        return redirect('/health/sports');
     }
 
     public function healthStore() {

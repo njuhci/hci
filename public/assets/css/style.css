@@ -69,3 +69,13 @@ footer p {
     border-radius: 5%;
 
 }
+
+.sport-total-number{
+    font-size: 25px;
+    color: #ff6a46;
+    font-weight: bold
+}
+
+.round-button{
+    border-radius: 10%;
+}

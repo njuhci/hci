@@ -13,8 +13,6 @@
                 <li><a href="/health">首页</a></li>
                 <li><a href="/activity">活动</a></li>
                 <li><a href="/expert">建议</a></li>
-                <li><a href="/moment">朋友圈</a></li>
-                <li><a href="/group">兴趣组</a></li>
             </ul>
             @if (Auth::check())
                 <ul class="nav navbar-nav navbar-right">
