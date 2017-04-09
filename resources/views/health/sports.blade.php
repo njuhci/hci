@@ -14,9 +14,7 @@
                 <li class="active"><a href="#brief" data-toggle="tab" aria-expanded="true">简要</a></li>
                 <li class=""><a href="#detail" data-toggle="tab" aria-expanded="false">详细</a></li>
                 <li class=""><a href="#data" data-toggle="tab" aria-expanded="false">统计</a></li>
-                <div class="pull-right set-goal">
-                    <a href="/health/goal" class="small">设置目标</a>
-                </div>
+
             </ul>
             <div id="myTabContent" class="tab-content">
                 <div class="tab-pane fade active in" id="brief">

@@ -11,9 +11,7 @@
             <ul class="nav nav-tabs">
                 <li class="active"><a href="#data" data-toggle="tab" aria-expanded="true"  id="js-data">数据</a></li>
                 <li class=""><a href="#chart" data-toggle="tab" aria-expanded="false" id="js-chart">图表</a></li>
-                <div class="pull-right set-goal">
-                    <a href="/health/goal" class="small">设置目标</a>
-                </div>
+
             </ul>
             <div id="myTabContent" class="tab-content">
                 <div class="tab-pane fade active in" id="data">

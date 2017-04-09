@@ -45,8 +45,8 @@
                     </div>
                 </div>
                 <div class="pull-right">
-                    <a href="/expert/detail/{{ $q->id }}" class="btn btn-default">返回</a>
-                    <button type="submit" class="btn btn-primary">保存</button>
+                    <button type="submit" class="btn btn-primary btn-sm">保存</button>
+                    <a href="/expert/detail/{{ $q->id }}" class="btn btn-danger btn-sm">返回</a>
                 </div>
             </form>
         </div>

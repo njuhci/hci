@@ -48,7 +48,7 @@ class HealthController extends Controller
         $result = $result[0];
         $result->heat = 500;
         $result->step = 15780;
-        $result->distance=12.5;
+        $result->distance = 12.5;
         $goal = \Auth::user()->goal;
         $per = array();
         if ($result->heat >= $goal->heat) $per['heat'] = 100;
@@ -147,6 +147,14 @@ class HealthController extends Controller
             $data = $data[0];
             $flag = 0;
         }
+
+        $data->start_time = "2017-04-05 02:15:20";
+        $data->end_time = "2017-04-05 10:01:52";
+        $data->sleeping_time = "8:00:15";
+        $data->wake_up_times = 5;
+        $data->deep_sleeping_time = "00:00:00";
+        $data->sleep_points = 80.25;
+
         return view('health/sleep', compact('data', 'flag'));
     }
 

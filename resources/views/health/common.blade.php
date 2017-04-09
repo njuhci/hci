@@ -7,6 +7,7 @@
                 <a href="/health/health" class="list-group-item">身体健康</a>
                 <a href="/health/sleep" class="list-group-item">睡眠</a>
             </div>
+            <a href="/health/goal" class="btn btn-primary btn-block">设置目标</a>
             <a href="/data/sports/create" class="btn btn-primary btn-block">模拟可穿戴设备</a>
         </div>
         <div class="col-lg-9">

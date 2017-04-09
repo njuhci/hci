@@ -137,7 +137,7 @@
                     },
                     areaStyle: {normal: {color: '#B1CCDA'}},
                     itemStyle: {normal: {opacity: 0}},
-                    data: [0, 15, 12]
+                    data: [0,45,68,79,82,83,86,89,90,93,96,95,93,92,98,89,88,93,95,93]
                 }
             ]
         };
