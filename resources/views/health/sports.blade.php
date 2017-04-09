@@ -184,6 +184,9 @@
             top: 10px;
         }
 
+        ul > li > span{
+            color: #fd6b4d
+        }
         .sub-content {
             padding: 10px 0px 0px 10px;
         }
