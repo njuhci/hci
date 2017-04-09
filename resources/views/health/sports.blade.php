@@ -141,12 +141,21 @@
                             </tbody>
                         </table>
                     </div>
+                    <div>
+
+                        <div>
+                            <a></a>
+                            <button></button>
+                            <abbr></abbr>
+
+                        </div>
+                    </div>
                 </div>
                 <div class="tab-pane fade" id="data">
                     <div class="sub-content">
                         <p style="margin-top: 10px">自加入知康以来，您：</p>
                         <ul class="data-ul">
-                            <li>一共燃烧了 <span>{{ $all->heat }}</span> 大卡的热量</li>
+                            <li>一共燃烧了 <span>{{ $all->heat }}</span> 大卡的热量, 相当于<span>47</span>个汉堡的热量</li>
                             <li>一共运动了 <span>{{ $all->time }}</span> 分钟</li>
                             <li>一共踏过了 <span>{{ $all->distance }}</span> 公里的马路</li>
                             <li>一共飞踏了 <span>{{ $all->step }}</span> 的步伐</li>
