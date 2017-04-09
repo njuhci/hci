@@ -139,7 +139,8 @@ class HealthController extends Controller
     }
 
     public function getSleepChartData() {
-        $data = DB::select('select * from data_sleep where user_id = ? order by start_time desc limit 10',
+        $data = DB::select('select * from data_sleep where user_id = ? order by start_time desc 
+        limit 15',
             [\Auth::user()->id]);
         return response()->json($data);
     }
