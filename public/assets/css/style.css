@@ -49,8 +49,8 @@ footer p {
     background-image: url("../../img/top.png");
     bottom: 70px;
     right: 30px;
-    width: 38px;    /* Width of image */
-    height: 38px;   /* Height of image */
+    width: 38px; /* Width of image */
+    height: 38px; /* Height of image */
 }
 
 .panel-top-border {
@@ -65,17 +65,78 @@ footer p {
     margin-bottom: -12px;
 }
 
-.welcome-join-button{
+.welcome-join-button {
     border-radius: 5%;
 
 }
 
-.sport-total-number{
+.sport-total-number {
     font-size: 25px;
     color: #ff6a46;
     font-weight: bold
 }
 
-.round-button{
+.round-button {
     border-radius: 10%;
+}
+
+.sport-icon {
+    width: 25px;
+    height: 25px;
+}
+
+.sport-type-icon {
+    width: 20px;
+    height: 23px;
+    padding-bottom: 3px;
+}
+
+.em-content {
+    color: #fd6b4d;
+    font-size: 15px;
+}
+
+.rank_num{
+    font-weight:bold;
+    font-size: 20px;
+    text-align: center;
+}
+
+.rank_title {
+    font-size: 19px;
+    font-weight: bold;
+    margin-left: 15px;
+}
+
+.rank_title span {
+    font-size: 15px;
+    font-weight: 600;
+    color: grey;
+}
+
+.match_info {
+    margin-left: 15px;
+}
+
+
+.rank_label {
+    height: 30px;
+    background: #FFA200;
+    float: left;
+    min-width: 15%;
+    max-width: 90%;
+    line-height: 31px;
+    text-align: center;
+    color: white;
+    margin-left: 15px;
+}
+
+.match_right_icon {
+    padding: 0;
+    height: 30px;
+    width: 30px;
+}
+
+.form-control input{
+    padding: 0;
 }

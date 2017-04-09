@@ -27,54 +27,61 @@
                             <button class="btn btn-primary btn-xs next">下一次</button>
                         </div>
                         <table class="table table-striped table-hover small">
+                            <thead>
+                            <tr>
+                                <td width="20%">项目</td>
+                                <td width="50%" style="text-align: center">数值</td>
+                            </tr>
+                            </thead>
                             <tbody>
                             <tr>
                                 <td>身高</td>
-                                <td><span class="t-height"></span> cm</td>
+                                <td style="text-align: center"><span class="t-height"></span> cm</td>
                             </tr>
                             <tr>
                                 <td>体重</td>
-                                <td><span class="t-weight"></span> kg</td>
+                                <td style="text-align: center"><span class="t-weight"></span> kg</td>
+
                             </tr>
                             <tr>
                                 <td>脂肪率</td>
-                                <td><span class="t-fat"></span>%</td>
+                                <td style="text-align: center"><span class="t-fat"></span>%</td>
                             </tr>
                             <tr>
                                 <td>肌肉率</td>
-                                <td><span class="t-muscle"></span>%</td>
+                                <td style="text-align: center"><span class="t-muscle"></span>%</td>
                             </tr>
                             <tr>
                                 <td>内脏脂肪</td>
-                                <td><span class="t-vis"></span></td>
+                                <td style="text-align: center"><span class="t-vis"></span></td>
                             </tr>
                             <tr>
                                 <td>基础代谢率</td>
-                                <td><span class="t-met"></span>%</td>
+                                <td style="text-align: center"><span class="t-met"></span>%</td>
                             </tr>
                             <tr>
                                 <td>水分率</td>
-                                <td><span class="t-moi"></span>%</td>
+                                <td style="text-align: center"><span class="t-moi"></span>%</td>
                             </tr>
                             <tr>
                                 <td>蛋白质</td>
-                                <td><span class="t-protein"></span>%</td>
+                                <td style="text-align: center"><span class="t-protein"></span>%</td>
                             </tr>
                             <tr>
                                 <td>骨量</td>
-                                <td><span class="t-bone"></span> kg</td>
+                                <td style="text-align: center"><span class="t-bone"></span> kg</td>
                             </tr>
                             <tr>
                                 <td>BMI</td>
-                                <td><span class="t-bmi"></span></td>
+                                <td style="text-align: center"><span class="t-bmi"></span></td>
                             </tr>
                             <tr>
                                 <td>心率</td>
-                                <td><span class="t-rate"></span></td>
+                                <td style="text-align: center"><span class="t-rate"></span></td>
                             </tr>
                             <tr>
                                 <td>血压</td>
-                                <td><span class="t-perssure"></span></td>
+                                <td style="text-align: center"><span class="t-perssure"></span></td>
                             </tr>
                             </tbody>
                         </table>

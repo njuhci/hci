@@ -46,9 +46,9 @@ class HealthController extends Controller
             sum(step) as step from data_sports where date(start_time) >= ?
             and date(start_time) <= ? and user_id = ?', [$start, $end, \Auth::user()->id]);
         $result = $result[0];
-        $result->heat = 300;
-        $result->step = 13300;
-        $result->distance = 12.5;
+        $result->heat = 1500;
+        $result->step = 40000;
+        $result->distance = 30;
         $goal = \Auth::user()->goal;
         $per = array();
         if ($result->heat >= $goal->heat) $per['heat'] = 100;

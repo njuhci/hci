@@ -25,10 +25,11 @@
                         <h4 style="margin-bottom: 20px">本周目标</h4>
                         <div>
                             燃烧热量
+                            <img  class="sport-type-icon" src="/img/icon/fire.png">
                             <small class="pull-right">
-                                目标：{{ $goal->heat }}大卡&nbsp&nbsp&nbsp
-                                已完成：{{ $result->heat }}大卡&nbsp&nbsp&nbsp
-                                完成度：{{ $per['heat'] }}%&nbsp&nbsp&nbsp
+                                目标：<span class="em-content">{{ $goal->heat}}</span>大卡&nbsp&nbsp&nbsp
+                                已完成：<span class="em-content">{{ $result->heat }}</span>大卡&nbsp&nbsp&nbsp
+                                完成度：<span class="em-content">{{ $per['heat'] }}</span>%&nbsp&nbsp&nbsp
                             </small>
                             <div class="progress progress-striped active">
                                 <div class="progress-bar progress-bar-warning"
@@ -37,10 +38,11 @@
                         </div>
                         <div>
                             运动距离
+                            <img  class="sport-type-icon" src="/img/icon/distance.png">
                             <small class="pull-right">
-                                目标：{{ $goal->distance }}公里&nbsp&nbsp&nbsp
-                                已完成：{{ $result->distance }}公里&nbsp&nbsp&nbsp
-                                完成度：{{ $per['distance'] }}%&nbsp&nbsp&nbsp
+                                目标：<span class="em-content">{{ $goal->distance }}</span>公里&nbsp&nbsp&nbsp
+                                已完成：<span class="em-content">{{ $result->distance }}</span>公里&nbsp&nbsp&nbsp
+                                完成度：<span class="em-content">{{ $per['distance'] }}</span>%&nbsp&nbsp&nbsp
                             </small>
                             <div class="progress progress-striped active">
                                 <div class="progress-bar progress-bar-success"
@@ -49,10 +51,11 @@
                         </div>
                         <div>
                             运动步数
+                            <img  class="sport-type-icon" src="/img/icon/footstep.png">
                             <small class="pull-right">
-                                目标：{{ $goal->step }}步&nbsp&nbsp&nbsp
-                                已完成：{{ $result->step }}步&nbsp&nbsp&nbsp
-                                完成度：{{ $per['step'] }}%&nbsp&nbsp&nbsp
+                                目标：<span class="em-content">{{ $goal->step }}</span>步&nbsp&nbsp&nbsp
+                                已完成：<span class="em-content">{{ $result->step }}</span>步&nbsp&nbsp&nbsp
+                                完成度：<span class="em-content">{{ $per['step'] }}</span>%&nbsp&nbsp&nbsp
                             </small>
                             <div class="progress progress-striped active">
                                 <div class="progress-bar progress-bar-info"
@@ -63,7 +66,7 @@
                         <h4 style="margin-top: 25px">本周运动情况</h4>
                         <div class="row">
                             <div class="col-lg-4">
-                                <h5>跑步</h5>
+                                <h5 class="sport-title"><img  class="sport-icon" src="/img/icon/run.png">跑步</h5>
                                 <div class="small">
                                     <p>运动时长：{{ $a1->time }}分钟</p>
                                     <p>运动距离：{{ $a1->distance }}公里</p>
@@ -73,7 +76,7 @@
                                 </div>
                             </div>
                             <div class="col-lg-4">
-                                <h5>步行</h5>
+                                <h5><img  class="sport-icon" src="/img/icon/walk.png">步行</h5>
                                 <div class="small">
                                     <p>运动时长：{{ $a2->time }}分钟</p>
                                     <p>运动距离：{{ $a2->distance }}公里</p>
@@ -82,7 +85,7 @@
                                 </div>
                             </div>
                             <div class="col-lg-4">
-                                <h5>健身</h5>
+                                <h5><img  class="sport-icon" src="/img/icon/body_building.png">健身</h5>
                                 <div class="small">
                                     <p>运动时长：{{ $a3->time }}分钟</p>
                                     <p>燃烧热量：{{ $a3->heat }}大卡</p>
@@ -91,7 +94,7 @@
                         </div>
                         <div class="row">
                             <div class="col-lg-4">
-                                <h5>游泳</h5>
+                                <h5><img  class="sport-icon" src="/img/icon/swim.png">游泳</h5>
                                 <div class="small">
                                     <p>运动时长：{{ $a4->time }}分钟</p>
                                     <p>运动距离：{{ $a4->distance }}公里</p>
@@ -99,7 +102,7 @@
                                 </div>
                             </div>
                             <div class="col-lg-4">
-                                <h5>骑行</h5>
+                                <h5><img  class="sport-icon" src="/img/icon/bicycle.png">骑行</h5>
                                 <div class="small">
                                     <p>运动时长：{{ $a5->time }}分钟</p>
                                     <p>运动距离：{{ $a5->distance }}公里</p>
@@ -151,13 +154,24 @@
                         </table>
                         <div style="width: 800px;height: 300px" id="sport_his_data"></div>
                     </div>
+                    <div>
+
+                        <div>
+                            <a></a>
+                            <button></button>
+                            <abbr></abbr>
+
+                        </div>
+                    </div>
                 </div>
                 <div class="tab-pane fade" id="data">
                     <div class="sub-content" >
 
-                        <p style="margin-top: 10px">自加入知康以来，您：</p>
+                        <p style="margin-top: 10px">自加入唤醒以来，您：</p>
                         <ul class="data-ul">
-                            <li>一共燃烧了 <span>{{ $all->heat }}</span> 大卡的热量</li>
+                            <li>一共燃烧了 <span>{{ $all->heat }}</span> 大卡的热量, 相当于<span>153</span>个
+                                <img style="width: 60px;height: 60px"
+                                     src="/img/icon/hamberger.png">的热量</li>
                             <li>一共运动了 <span>{{ $all->time }}</span> 分钟</li>
                             <li>一共踏过了 <span>{{ $all->distance }}</span> 公里的马路</li>
                             <li>一共飞踏了 <span>{{ $all->step }}</span> 的步伐</li>
@@ -175,6 +189,9 @@
             top: 10px;
         }
 
+        ul > li > span{
+            color: #fd6b4d
+        }
         .sub-content {
             padding: 10px 0px 0px 10px;
         }

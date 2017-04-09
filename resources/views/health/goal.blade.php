@@ -43,8 +43,10 @@
                     </div>
                 </div>
                 <div class="pull-right">
-                    <a href="/health" class="btn btn-warning round-button">返回</a>
-                    <button type="submit" class="btn btn-primary round-button">保存</button>
+
+                    <button type="submit" class="btn btn-primary btn-sm">保存</button>
+                    <button href="/health" class="btn btn-danger btn-sm">返回</button>
+
                 </div>
             </form>
         </div>
