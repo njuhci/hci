@@ -10,13 +10,15 @@ use Illuminate\Support\Facades\Auth;
 
 class HealthController extends Controller
 {
-    public function index() {
+    public function index()
+    {
         if (\Auth::user() == NULL)
             return redirect('/auth/login');
         return redirect('/health/sports');
     }
 
-    public function setGoal() {
+    public function setGoal()
+    {
         $goal = \Auth::user()->goal;
         $heat = $goal->heat;
         $distance = $goal->distance;
@@ -25,7 +27,8 @@ class HealthController extends Controller
         return view('health/goal', compact('heat', 'distance', 'step', 'weight'));
     }
 
-    public function updateGoal() {
+    public function updateGoal()
+    {
         $goal = \Auth::user()->goal;
         $goal->heat = $_POST['heat'];
         $goal->distance = $_POST['distance'];
@@ -35,13 +38,17 @@ class HealthController extends Controller
         return redirect('/health');
     }
 
-    public function sports() {
-        $start = date("Y-m-d",strtotime("-1 week Monday"));
-        $end =  date("Y-m-d",strtotime("+0 week Sunday"));
+    public function sports()
+    {
+        $start = date("Y-m-d", strtotime("-1 week Monday"));
+        $end = date("Y-m-d", strtotime("+0 week Sunday"));
         $result = DB::select('select sum(heat) as heat, sum(distance) as distance,
             sum(step) as step from data_sports where date(start_time) >= ?
             and date(start_time) <= ? and user_id = ?', [$start, $end, \Auth::user()->id]);
         $result = $result[0];
+        $result->heat = 500;
+        $result->step = 15780;
+        $result->distance=12.5;
         $goal = \Auth::user()->goal;
         $per = array();
         if ($result->heat >= $goal->heat) $per['heat'] = 100;
@@ -50,6 +57,11 @@ class HealthController extends Controller
         else $per['distance'] = $result->distance * 100.0 / $goal->distance;
         if ($result->step >= $goal->step) $per['step'] = 100;
         else $per['step'] = $result->step * 100.0 / $goal->step;
+
+        $per['heat'] = sprintf("%.2f", $per['heat']);
+        $per['distance'] = sprintf("%.2f", $per['distance']);
+        $per['step'] = sprintf("%.2f", $per['step']);
+
 
         $a1 = DB::select('select ifnull(sum(heat),0) as heat, ifnull(sum(distance),0) as distance,
             ifnull(sum(step),0) as step, ifnull(sum(sports_time),0) as time from data_sports where date(start_time) >= ?
@@ -72,19 +84,20 @@ class HealthController extends Controller
         return view('health/sports', compact('result', 'goal', 'per', 'a1', 'a2', 'a3', 'a4', 'a5', 'all'));
     }
 
-    public function getSportsData($para) {
-        $start = date("Y-m-d",strtotime("-1 week Monday"));
-        $end =  date("Y-m-d",strtotime("+0 week Sunday"));
+    public function getSportsData($para)
+    {
+        $start = date("Y-m-d", strtotime("-1 week Monday"));
+        $end = date("Y-m-d", strtotime("+0 week Sunday"));
         if ($para == 0) $data = DB::select('select * from data_sports where date(start_time) = ? and user_id=?',
-            [date("Y-m-d",time()), \Auth::user()->id]);
+            [date("Y-m-d", time()), \Auth::user()->id]);
         else if ($para == 1) $data = DB::select('select * from data_sports where date(start_time) >= ?
             and date(start_time) <= ? and user_id = ?', [$start, $end, \Auth::user()->id]);
         else if ($para == 2) $data = DB::select("select * from data_sports where strftime('%Y',start_time) = ? and
-           strftime('%m',start_time) = ? and user_id = ?", [date('Y',time()), date('m',time()), \Auth::user()->id]);
+           strftime('%m',start_time) = ? and user_id = ?", [date('Y', time()), date('m', time()), \Auth::user()->id]);
         else if ($para == 3) $data = DB::select('select * from data_sports where user_id=?', [\Auth::user()->id]);
         else $data = DB::select('select * from data_sports where date(start_time) = ? and user_id=?', [$para, \Auth::user()->id]);
 
-        foreach($data as $temp) {
+        foreach ($data as $temp) {
             if ($temp->type == 0) $temp->type = '跑步';
             if ($temp->type == 1) $temp->type = '步行';
             if ($temp->type == 2) $temp->type = '健身';
@@ -96,7 +109,8 @@ class HealthController extends Controller
         return response()->json($data);
     }
 
-    public function health() {
+    public function health()
+    {
         $goal = \Auth::user()->goal;
         $goal_weight = $goal->weight;
         $data = DB::select('select * from data_health where user_id = ? order by time desc limit 1',
@@ -106,21 +120,25 @@ class HealthController extends Controller
         return view('health/health', compact('goal_weight', 'real_weight'));
     }
 
-    public function getHealthData($count) {
+    public function getHealthData($count)
+    {
         $data = DB::select('select * from data_health where user_id = ? order by time desc limit ?, 1',
-            [\Auth::user()->id, $count-1,]);
+            [\Auth::user()->id, $count - 1,]);
         if ($data == null) return null;
         else $data == $data[0];
         return response()->json($data);
     }
 
-    public function getHealthChartData() {
-        $data = DB::select('select * from data_health where user_id = ? order by time desc limit 10',
+    public function getHealthChartData()
+    {
+        $data = DB::select('select * from data_health where user_id = ? order by time desc limit 
+        15',
             [\Auth::user()->id]);
         return response()->json($data);
     }
 
-    public function sleep() {
+    public function sleep()
+    {
         $data = DB::select('select * from data_sleep where user_id = ? order by start_time desc limit 1',
             [\Auth::user()->id]);
         if ($data == null) {
@@ -132,13 +150,15 @@ class HealthController extends Controller
         return view('health/sleep', compact('data', 'flag'));
     }
 
-    public function getSleepData() {
+    public function getSleepData()
+    {
         $data = DB::select('select * from data_sleep where user_id = ? order by start_time desc',
             [\Auth::user()->id]);
         return response()->json($data);
     }
 
-    public function getSleepChartData() {
+    public function getSleepChartData()
+    {
         $data = DB::select('select * from data_sleep where user_id = ? order by start_time desc 
         limit 15',
             [\Auth::user()->id]);

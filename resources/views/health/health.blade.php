@@ -154,7 +154,7 @@
                 success:function(data){
                     $.each(data, function(i, n) {
                         var t = data.length-i-1;
-                        temp1[t] = n['time'];
+                        temp1[t] = n['time'].substring(0,10);
                         if (para == 0) temp2[t] = n['height'];
                         else if (para == 1) temp2[t] = n['weight'];
                         else if (para == 2) temp2[t] = n['bmi'];

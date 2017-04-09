@@ -181,7 +181,7 @@
                         ]
                     };
                     var canvas = $("#Chart").get(0).getContext("2d");
-                    var myBarChart = new Chart(canvas).Bar(data);
+                    var myBarChart = new Chart(canvas).Line(data);
                 }
             });
         }
