@@ -36,7 +36,7 @@ class DataController extends Controller
             'distance'=>$_POST['distance'],
             'step'=>$_POST['step'],
         ]);
-        return redirect('/data/sports/create');
+        return redirect('/health/sport');
     }
 
     public function healthStore() {
@@ -56,7 +56,7 @@ class DataController extends Controller
             'heart_rate' => $_POST['heart_rate'],
             'blood_pressure' => $_POST['blood_pressure'],
         ]);
-        return redirect('/data/health/create');
+        return redirect('/health/health');
     }
 
     public function sleepStore() {
@@ -69,6 +69,6 @@ class DataController extends Controller
             'wake_up_times' => $_POST['wake_up_times'],
             'sleep_points' => $_POST['sleep_points'],
         ]);
-        return redirect('/data/sleep/create');
+        return redirect('/health/sleep');
     }
 }

@@ -4,14 +4,17 @@
 @stop
 @section('css_js_extra_file')
     <script src="{{ URL::asset('/assets/js/moment-with-locales.js') }}"></script>
-    <link rel="stylesheet" href="{{ URL::asset('/assets/plugins/DateTimePicker/css/bootstrap-datetimepicker.min.css') }}">
+    <link rel="stylesheet"
+          href="{{ URL::asset('/assets/plugins/DateTimePicker/css/bootstrap-datetimepicker.min.css') }}">
     <script src="{{ URL::asset('/assets/plugins/DateTimePicker/js/bootstrap-datetimepicker.min.js') }}"></script>
+    <script src="{{ URL::asset('/assets/js/echarts.min.js') }}"></script>
 @stop
 @section('main-content')
     <div class="panel">
         <div class="panel-body">
             <ul class="nav nav-tabs">
-                <li class="active"><a href="#brief" data-toggle="tab" aria-expanded="true">简要</a></li>
+                <li class="active"><a href="#brief" data-toggle="tab" aria-expanded="true">简要</a>
+                </li>
                 <li class=""><a href="#detail" data-toggle="tab" aria-expanded="false">详细</a></li>
                 <li class=""><a href="#data" data-toggle="tab" aria-expanded="false">统计</a></li>
 
@@ -22,13 +25,14 @@
                         <h4 style="margin-bottom: 20px">本周目标</h4>
                         <div>
                             燃烧热量
-                            <small  class="pull-right">
+                            <small class="pull-right">
                                 目标：{{ $goal->heat }}大卡&nbsp&nbsp&nbsp
                                 已完成：{{ $result->heat }}大卡&nbsp&nbsp&nbsp
                                 完成度：{{ $per['heat'] }}%&nbsp&nbsp&nbsp
                             </small>
                             <div class="progress progress-striped active">
-                                <div class="progress-bar progress-bar-warning" style="width: {{ $per['heat'] }}%"></div>
+                                <div class="progress-bar progress-bar-warning"
+                                     style="width: {{ $per['heat'] }}%"></div>
                             </div>
                         </div>
                         <div>
@@ -39,21 +43,23 @@
                                 完成度：{{ $per['distance'] }}%&nbsp&nbsp&nbsp
                             </small>
                             <div class="progress progress-striped active">
-                                <div class="progress-bar progress-bar-success" style="width: {{ $per['distance'] }}%"></div>
+                                <div class="progress-bar progress-bar-success"
+                                     style="width: {{ $per['distance'] }}%"></div>
                             </div>
                         </div>
                         <div>
                             运动步数
-                            <small  class="pull-right">
+                            <small class="pull-right">
                                 目标：{{ $goal->step }}步&nbsp&nbsp&nbsp
                                 已完成：{{ $result->step }}步&nbsp&nbsp&nbsp
                                 完成度：{{ $per['step'] }}%&nbsp&nbsp&nbsp
                             </small>
                             <div class="progress progress-striped active">
-                                <div class="progress-bar progress-bar-info" style="width: {{ $per['step'] }}%"></div>
+                                <div class="progress-bar progress-bar-info"
+                                     style="width: {{ $per['step'] }}%"></div>
                             </div>
                         </div>
-                        <hr />
+                        <hr/>
                         <h4 style="margin-top: 25px">本周运动情况</h4>
                         <div class="row">
                             <div class="col-lg-4">
@@ -106,7 +112,8 @@
                 <div class="tab-pane fade" id="detail">
                     <div class="sub-content">
                         <div class="selector row">
-                            <div class="col-xs-6" style="position: relative; top: 20px" id="js-selector">
+                            <div class="col-xs-6" style="position: relative; top: 20px"
+                                 id="js-selector">
                                 <a class="a-active">今日</a>
                                 <a>本周</a>
                                 <a>本月</a>
@@ -121,7 +128,9 @@
                                 </div>
                             </div>
                             <div class="col-lg-1">
-                                <button class="btn btn-primary" id="js-go" style="position: relative; right: 20px">GO</button>
+                                <button class="btn btn-primary" id="js-go"
+                                        style="position: relative; right: 20px">GO
+                                </button>
                             </div>
                         </div>
                         <table class="table table-striped table-hover small">
@@ -140,10 +149,12 @@
 
                             </tbody>
                         </table>
+                        <div style="width: 800px;height: 300px" id="sport_his_data"></div>
                     </div>
                 </div>
                 <div class="tab-pane fade" id="data">
-                    <div class="sub-content">
+                    <div class="sub-content" >
+
                         <p style="margin-top: 10px">自加入知康以来，您：</p>
                         <ul class="data-ul">
                             <li>一共燃烧了 <span>{{ $all->heat }}</span> 大卡的热量</li>
@@ -163,33 +174,99 @@
             position: relative;
             top: 10px;
         }
+
         .sub-content {
             padding: 10px 0px 0px 10px;
         }
+
         .selector a {
             margin-right: 15px;
             cursor: pointer;
         }
+
         .selector {
             margin-bottom: 15px;
         }
+
         .a-active {
             text-decoration: underline;
             color: #136c4f;
             font-weight: bold;
         }
+
         .more-data {
             cursor: pointer;
         }
+
         .data-ul li {
             margin-bottom: 10px;
         }
+
         .data-ul li span {
             font-size: large;
             font-weight: bold;
         }
     </style>
     <script>
+
+        var option = {
+            title: {
+                text: '历史运动数据'
+            },
+            tooltip: {
+                trigger: 'axis',
+                axisPointer: {
+                    type: 'cross',
+                    label: {
+                        backgroundColor: '#6a7985'
+                    }
+                }
+            },
+            toolbox: {
+                feature: {
+                    saveAsImage: {}
+                }
+            },
+            grid: {
+                left: '3%',
+                right: '4%',
+                bottom: '3%',
+                containLabel: true
+            },
+            xAxis: [
+                {
+                    type: 'category',
+                    boundaryGap: false,
+                    data: []
+                }
+            ],
+            yAxis: [
+                {
+                    type: 'value',
+                    splitNumber: 10,
+                    axisTick: {show: false},
+                    splitLine: {show: false}
+                }
+            ],
+            series: [
+                {
+                    name: '运动步数',
+                    type: 'line',
+                    stack: '总量',
+                    lineStyle: {
+                        normal: {
+                            color: '#97BBCD'
+                        }
+                    },
+                    areaStyle: {normal: {color: '#B1CCDA'}},
+                    itemStyle: {normal: {opacity: 0}},
+                    data: [6537, 8657, 7912, 7328, 9881, 10032, 8973, 8893, 11235, 12531, 11039, 11593,
+                        12107, 10039, 9823, 9392]
+                }
+            ]
+        };
+
+
         $(document).ready(function () {
             $('#date_picker').datetimepicker({
                 locale: 'zh-CN',
@@ -203,22 +280,23 @@
                 loadData($date);
             });
 
-            $('#js-selector').children().click(function() {
+            $('#js-selector').children().click(function () {
                 $(this).parent().children().removeClass('a-active');
                 $(this).addClass('a-active');
                 var index = $(this).index();
                 loadData(index);
             });
             loadData(0);
+            loadSportChart()
         });
         function loadData(para) {
             $.ajax({
-                url:"/health/getSportsData/" + para,
-                type:"get",
-                success:function(data){
+                url: "/health/getSportsData/" + para,
+                type: "get",
+                success: function (data) {
                     $('#js-tbody').empty();
                     var temp = '';
-                    $.each(data, function(i, n) {
+                    $.each(data, function (i, n) {
                         temp += "<tr><td>" + n['type'] + "</td><td>" + n['start_time'] + "</td><td>" +
                                 n['end_time'] + "</td><td>" + n['sports_time'] + "</td><td>" + n['heat']
                                 + "</td><td>" + n['distance'] + "</td><td>" + n['step'] + "</td></tr>";
@@ -226,7 +304,13 @@
                     $('#js-tbody').append(temp);
                 }
             });
-        };
+        }
+        ;
+
+        function loadSportChart() {
+            var mychart = echarts.init(document.getElementById('sport_his_data'))
+            mychart.setOption(option)
+        }
 
     </script>
 @stop
